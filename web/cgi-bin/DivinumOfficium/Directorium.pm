@@ -179,7 +179,7 @@ sub transfered {
   my $year = shift;
   my $version = shift;
 
-  $str =~ s+Sancti(M|Cist|OP)?/++;
+  $str =~ s+Sancti(M|Cist|OP|HU)?/++;
   return '' unless $str;
 
   my $cache_key = "transfer:$version:$year";
