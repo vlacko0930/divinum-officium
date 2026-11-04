@@ -7,6 +7,7 @@ $a = 4;
 
 use DivinumOfficium::Directorium qw(get_from_directorium dirge);
 
+require "$Bin/specials/strigoniense.pl";
 require "$Bin/specials/capitulis.pl";
 require "$Bin/specials/hymni.pl";
 require "$Bin/specials/orationes.pl";
@@ -45,6 +46,22 @@ sub specials {
   while ($tind < @t) {
     $item = $t[$tind++];
     $item =~ s/\s*$//;
+
+    # The Strigoniense psalter supplies collects for Prime and Compline,
+    # replacing the fixed Tridentine prayers in the Ordinarium.
+    if ($version =~ /Strigoniense/ && $item =~ /^\$oratio_(Domine|Visita)$/) {
+      my $which = $1;
+      my $strig_key =
+          $which eq 'Domine'
+        ? ($hora eq 'Prima' ? strig_oratio_key($lang) : '')
+        : 'Oratio Completorium';
+      my $strig_text = $strig_key ? strig_special($strig_key, $lang) : '';
+      if ($strig_text ne '') {
+        $item = $strig_text;
+        # Our text already carries its own conclusion.
+        $tind++ if $t[$tind] && $t[$tind] =~ /^\$Per Dominum\s*$/;
+      }
+    }
 
     if ($item !~ /^\s*\#/) {
       if (!$skipflag) { push(@s, $item); }
@@ -644,6 +661,15 @@ sub getfrompsalterium {
   #get from psalterium
   my %c = %{setupstring($lang, 'Psalterium/Special/Major Special.txt')};
   my $name = gettempora('getfrompsalterium major') . " $item";
+
+  if ($version =~ /Strigoniense/) {
+    my %strig = %{setupstring($lang, 'Psalterium/Strigoniense/Special.txt')};
+    my $w = $strig{"$name $ind"};
+    if (!$w) { $w = $strig{"$name 1"}; }
+    if (!$w) { $w = $strig{"$name 3"}; }
+    if (!$w) { $w = $strig{"$name 2"}; }
+    return $w if $w;
+  }
 
   my $w = $c{"$name $ind"};
   if (!$w) { $w = $c{"$name 1"}; }

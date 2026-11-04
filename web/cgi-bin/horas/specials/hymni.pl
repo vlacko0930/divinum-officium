@@ -39,9 +39,14 @@ sub gethymn {
   }
 
   if ($hymnsource) {
-    my %h = %{setupstring($lang, "Psalterium/Special/$hymnsource Special.txt")};
-    $name = tryoldhymn(\%h, $name);
-    $hymn = $h{$name};
+    my $strig = strig_special($name, $lang);
+    if ($strig ne '') {
+      $hymn = $strig;
+    } else {
+      my %h = %{setupstring($lang, "Psalterium/Special/$hymnsource Special.txt")};
+      $name = tryoldhymn(\%h, $name);
+      $hymn = $h{$name};
+    }
   }
 
   if ($version !~ /196[02]/ && $hymn =~ /\*/) {    # doxology needed
@@ -108,7 +113,7 @@ sub hymnusmajor {
     $name .= ' hiemalis'
       if (
            $name =~ /Day0/i
-        && $version !~ /praedicatorum/i
+        && $version !~ /praedicatorum|Strigoniense/i
         && ($name =~ /Laudes/i || $version =~ /cist/i || $lang =~ /gabc/i)
         && ( $dayname[0] =~ /Epi[2-6]/
           || $dayname[0] =~ /Epi1/i && $version =~ /cist/i

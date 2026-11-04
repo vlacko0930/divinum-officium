@@ -72,6 +72,8 @@ sub capitulum_prima {
       && $dayname[0] !~ /Pasc/i) ? 'Feria' : 'Dominica';
 
   my $capit = $brevis{$key} . "\n\$Deo gratias\n_\n";
+  my $strig = strig_special("Capitulum $key Prima", $lang);
+  $capit = $strig . "\n_\n" if $strig ne '';
   setbuild1('Capitulum', "Psalterium $key");
 
   # Shorter pause at Flexa in Ant. Monasticum compared to Ant. Romanum

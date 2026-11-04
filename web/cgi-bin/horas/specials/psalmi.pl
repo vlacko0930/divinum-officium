@@ -33,6 +33,12 @@ sub psalmi_minor {
     $version, $hora, $dayofweek, $winner, %winner, @dayname, $rule,
     $communerule, $rank, $laudes, $day, $year, %winner2, $label,
   );
+
+  if ($version =~ /Strigoniense/) {
+    my $strig = strig_psalmi_minor($lang);
+    return $strig if $strig;
+  }
+
   my %psalmi = %{setupstring($lang, 'Psalterium/Psalmi/Psalmi minor.txt')};
   my (@psalmi, $ant, $psalms, $prefix);
   my $psalmTone;    # GABC: for selection of PsalmTone
@@ -339,6 +345,11 @@ sub psalmi_major {
     $commune, %winner, $month, $day, $year, %winner2,
     $communetype, $antecapitulum, $antecapitulum2, %commune, $votive, $label,
   );
+
+  if ($version =~ /Strigoniense/ && strig_major_applicable($lang)) {
+    return strig_psalmi_major($lang);
+  }
+
   if ($version =~ /monastic/i && $hora eq 'Laudes' && $rule !~ /matutinum romanum/i) { $psalmnum1 = $psalmnum2 = -1; }
   my %psalmi = %{setupstring($lang, 'Psalterium/Psalmi/Psalmi major.txt')};
   my $name = $hora;
@@ -707,6 +718,21 @@ sub antetpsalm {
   }
 
   $s[-1] = "Ant. $lastant" if $lastant;
+
+  if ($version =~ /Strigoniense/ && $hora eq 'Completorium') {
+    # Only after the psalm set, not after the Nunc dimittis.
+    my $is_canticle = grep { /\b(?:229|230|231|232|233)\b/ } @$psalmi_ref;
+    if (!$is_canticle) {
+      my $conclusio = strig_special('Conclusio Completorium', $lang);
+      if ($conclusio eq '') {
+        my @c = split("\n", prayer('Alleluia', $lang));
+        my $lent = $dayname[0] =~ /Quad/i && !Septuagesima_vesp();
+        $conclusio = $lent ? ($c[1] // $c[0]) : $c[0];
+        $conclusio =~ s/^v\.\s*//;
+      }
+      push(@s, "_\n$conclusio", "\n");
+    }
+  }
 }
 
 #*** get_stThomas_feria($year)
