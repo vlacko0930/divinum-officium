@@ -40,7 +40,7 @@ sub horas {
 
   # GABC: Ensure no chant is displayed at the little hours during the Triduum
   # And (for the time being) Chant is deactivated if OCist or OP version is displayed
-  if ($version =~ /Cisterciensis|Praedicatorum/
+  if ($version =~ /Cisterciensis|Praedicatorum|Strigoniense/
     || (triduum_gloria_omitted() && $hora =~ /Prima|Tertia|Sexta|Nona|Completorium/i))
   {
     $lang1 =~ s/\-gabc//;                  # Remove -gabc from Language
@@ -554,12 +554,18 @@ sub canticum {
     $duplexf ||= $duplex > 2;
     my $key = $num == 3 ? $vespera : $num;
     my $df;
-    ($ant, $df) = ant123_special($lang);
+    my $strig_ant = strig_canticle_ant($lang);
 
-    unless ($ant) {
-      ($ant, $c) = getantvers('Ant', $key, $lang);
+    if ($strig_ant ne '') {
+      $ant = $strig_ant;
     } else {
-      $duplexf ||= $df;
+      ($ant, $df) = ant123_special($lang);
+
+      unless ($ant) {
+        ($ant, $c) = getantvers('Ant', $key, $lang);
+      } else {
+        $duplexf ||= $df;
+      }
     }
   }
 

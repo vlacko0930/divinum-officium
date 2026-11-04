@@ -18,6 +18,7 @@ sub capitulum_major {
 
   if (!$capit) {
     my %capit = %{setupstring($lang, 'Psalterium/Special/Major Special.txt')};
+    strig_merge_special(\%capit, $lang, '^(?:Dominica|Capitulum)');
     $name = gettempora('Capitulum major') . " $hora";
     $capit = $capit{$name};
   }
@@ -164,6 +165,7 @@ sub minor_reponsory {
   our ($hora, $version, %dayname);
 
   my %capit = %{setupstring($lang, 'Psalterium/Special/Minor Special.txt')};
+  strig_merge_special(\%capit, $lang, '^(?:Responsory|Versum|Completorium)');
   my $name = gettempora('Capitulum minor') . " $hora";
   $name = 'Completorium' if $hora eq 'Completorium';
   $name .= 'M' if ($version =~ /Monastic/);
@@ -233,6 +235,7 @@ sub capitulum_minor {
 
   # Take deafulr from psalterium
   my %capit = %{setupstring($lang, 'Psalterium/Special/Minor Special.txt')};
+  strig_merge_special(\%capit, $lang, '^(?:Dominica|Completorium)');
   my $name = gettempora('Capitulum minor') . " $hora";
   $name = 'Completorium' if $hora eq 'Completorium';
   my $capit = $capit{$name} =~ s/\s*$//r;

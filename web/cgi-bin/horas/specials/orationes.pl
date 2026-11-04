@@ -73,6 +73,15 @@ sub oratio {
     $w = $w{"Oratio $ind"};
   }    # if none yet, look for Oratio of Vespers or Lauds according to ind
 
+  my $strig_key = strig_oratio_key($lang);
+  if ($strig_key) {
+    my $strig_oratio = strig_special($strig_key, $lang);
+    if ($strig_oratio ne '') {
+      $w = $strig_oratio;
+      setbuild2('Oratio Strigoniense');
+    }
+  }
+
   if (!$w) {    # if none yet, look in commune.
     my %c = columnsel($lang) ? %commune : %commune2;
     my $i = $ind;

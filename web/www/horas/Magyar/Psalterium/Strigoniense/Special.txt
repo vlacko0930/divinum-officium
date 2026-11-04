@@ -1,0 +1,256 @@
+# Psalterium Strigoniense (2014): a vasárnapi nappali zsolozsma ordináriuma és tulajdon szövegei.
+# A zsoltárszövegek a rendes Psalterium/Psalmorum fájlokból származnak.
+# A 2014-es kiadás joga: Argumentum Kiadó, Budapest;
+# szerkesztette Földváry Miklós István, Csonka Szabina Babett, Szoliva Gábriel OFM.
+# Az énekelt tételek kottája nélkül, szövegként kerültek felhasználásra.
+
+[Dominica Laudes]
+!Jel 7:12
+v. Áldás és fényesség, bölcsesség és hálaadás, tisztelet és dicsőség Istenünknek mindörökkön örökké, ámen!
+$Deo gratias
+
+[Dominica Vespera]
+!2Tessz 3:5
+v. Az Úr vezérelje a ti szíveteket és testeteket Isten szeretetében és Krisztus béketűrésében!
+$Deo gratias
+
+[Dominica Ant Laudes]
+Alleluja, alleluja, alleluja.
+
+[Dominica Ant Vespera]
+Tiéd a hatalom, tiéd az ország, Urunk, te vagy minden nemzet felett; adj békét, Urunk, a mi napjainkban!
+
+[Dominica Versum 2]
+V. Az Úr országol, örvendezzék a föld!
+R. Vigadjon a szigetek sokasága!
+
+[Dominica Versum 3]
+V. Szálljon fel, Uram, az én imádságom!
+R. Miként a tömjénfüst, a te színed elé!
+
+[Hymnus Day0 Laudes]
+v. Az éjszakának sötétsége oszlik,
+íme, tündöklik hajnali nap fénye,
+a Mindenhatót bizalommal kérjük,
+s teljes erővel: Ámen.
+_
+A bágyadtságot tőlünk messze űzze,
+és könyörülvén egészséget adjon,
+s mint kegyes Atyánk tárja föl minékünk
+mennyek országát!
+_
+Adja meg mindezt Atya, Fiú, Lélek,
+Szentháromságban egylényegű Isten,
+kinek visszhangzik örökké a földön
+nagy dicsősége. Ámen.
+
+[Hymnus Day0 Vespera]
+v. Ki minden fénynek Atyja vagy,
+és a napokra fényt derítsz,
+s midőn az ősfényt alkotád,
+világnak adtál kezdetet,
+_
+Ki egy nappá avattad azt,
+mi reggelt, s estet összeköt:
+sötét káosz csúszik reánk,
+halljad sírásunk és imánk!
+_
+Lelkünk egeket ostoroz,
+jutalmul élet-kincset ossz,
+kerüljük, ami kárt okoz,
+tisztuljon minden, ami rossz!
+_
+Ne kelljen bűnök terhivel
+az életet így hagyni el,
+hiú gondolattal teli
+s vétek-bilinccsel küzdeni!
+_
+Ezt teljesítse az Atya
+s vele egylényű egy Fia,
+aki veled uralkodik,
+ó, Lélek, minden századig!
+Amen.
+
+[Hymnus Prima]
+v. Fölkelt a napnak csillaga,
+s mi esdve kérjük Istenünk:
+veszélytől óvja híveit
+mindabban, mit e nap teszünk!
+_
+Perlő nyelvünket fogja meg,
+viszály botrányát űzze el,
+szemünket ő takarja el,
+hiú látványtól óvja meg!
+_
+Így őrizzük fegyelmedet,
+míg véget ér e nappalunk,
+hogy majd, ha jő az éjszaka,
+tisztán zenghessünk glóriát.
+_
+Szívünk mélyében tisztaság,
+s ne légyen benne dőreség,
+a kevély testet törje be
+a mértéktartó étkezés!
+_
+Dicséret zengje, glória
+az Atyaistent és Fiát
+s velük a Szent Vigasztalót
+örökké, minden századon!
+Amen.
+
+[Hymnus Tertia]
+v. Szentlélek, kérünk, szállj közénk,
+Atya s Fiúval egy való,
+sietve jöjj a szíveket
+kegyelmesen betölteni!
+_
+A nyelv, az érzék, ész, erő
+tenéked zengjen vallomást,
+szeretet lángját add nekünk,
+s áraszd másokra általunk!
+_
+Ezt teljesítse az Atya
+s vele egylényű egy Fia,
+aki veled uralkodik,
+ó, Lélek, minden századig!
+Amen.
+
+[Hymnus Sexta]
+v. Hatalmas Úr, egy Istenünk,
+dolgok rendjét ki megszabod,
+a reggelt fénnyel látod el
+s tüzes nappal a déli időt:
+_
+Viszályok lángját fojtsad el
+s a szenvedélyek vad tüzét;
+a testnek hozzál jó erőt,
+békével áldd a szíveket!
+_
+Ezt teljesítse az Atya
+s vele egylényegű egy Fia,
+aki veled uralkodik,
+ó, Lélek, minden századig!
+Amen.
+
+[Hymnus Nona]
+v. Ki tartasz minden dolgokat,
+erős Isten, nem változó,
+de napvilágnak idejét
+változásokkal rendező:
+_
+Oly fénylő, tiszta estet adj,
+melyben az élet nem fogy el,
+de szent halál jutalmaként
+örök dicsőség vár reánk!
+_
+Ezt teljesítse az Atya
+s vele egylényegű egy Fia,
+aki veled uralkodik,
+ó, Lélek, minden századig!
+Amen.
+
+[Hymnus Completorium]
+v. Immár a nap leáldozott,
+Teremtőnk, kérünk tégedet,
+légy kegyes és maradj velünk,
+őrizzed, óvjad népedet!
+_
+A gonosz álmok fussanak,
+és minden éji képzelet;
+az ellent kösse meg kezed,
+testünket hogy ne rontsa meg!
+_
+Kérünk, hatalmas jó Atyánk,
+Úr Jézus Krisztus érdemén,
+ki Szentlélekkel és veled
+uralkodik s örökkön él.
+Amen.
+
+[Oratio Dominica Laudes]
+A mi hangunk, Urunk, mindig hozzád fohászkodjék, és jusson föl a te kegyességed füleihez!
+$Per Dominum
+
+[Oratio Dominica Vespera]
+Törd le, kérünk, Urunk, az emberi hitványság bilincseit, hogy a te nevedet megvallani szabad lélekkel törekedjünk.
+$Per Dominum
+
+[Capitulum Dominica Prima]
+!1Tim 1:17
+v. Az örökkévalóság láthatatlan és halhatatlan királyának, az egyedülvaló Istennek tisztesség és dicsőség örökkön örökké, ámen!
+$Deo gratias
+
+[Dominica Tertia]
+!Jer 17:14
+v. Gyógyíts meg engem, Uram, és meggyógyulok, szabadíts meg engem, és megszabadulok, mert te vagy az én dicsőségem!
+$Deo gratias
+
+[Dominica Sexta]
+!Gal 6:2
+v. Hordozzátok egymásnak terhét, mert így teljesíteni fogjátok Krisztus törvényét!
+$Deo gratias
+
+[Dominica Nona]
+!1Kor 6:20
+v. Nagy áron vétettetek meg, testvérek, hordozzátok és dicsőítsétek meg tehát Istent szívetekben és testetekben!
+$Deo gratias
+
+[Completorium]
+!Jer 14:9
+v. Te, Uram, közöttünk vagy, mi a te nevedet viseljük, ne hagyj hát el minket, Urunk, Istenünk!
+$Deo gratias
+
+[Responsory breve Dominica Tertia]
+R.br. Hajtsd az én szívemet, Isten, * a te bizonyságaidhoz!
+R. Hajtsd az én szívemet, Isten, * a te bizonyságaidhoz!
+V. Fordítsd el az én szemeimet, hogy hiábavalóságra ne nézzenek, a te utadon éltess engem!
+R. A te bizonyságaidban.
+&Gloria
+R. Hajtsd az én szívemet, Isten, * a te bizonyságaidhoz!
+
+[Versum Dominica Tertia]
+V. Légy segítségemre, Uram, ne hagyj el engem!
+R. És ne vess meg engem, Isten, üdvösségem!
+
+[Responsory breve Dominica Sexta]
+R.br. Mindörökké, ó, Urunk, * megmarad a te igéd.
+R. Mindörökké, ó, Urunk, * megmarad a te igéd.
+V. Mindörökkön örökké a te igazságod.
+R. Megmarad a te igéd.
+&Gloria
+R. Mindörökké, ó, Urunk, * megmarad a te igéd.
+
+[Versum Dominica Sexta]
+V. Az Úr énnékem pásztorom, nincsen hiányom semmiben.
+R. Zöldellő réteken ád helyet nékem.
+
+[Responsory breve Dominica Nona]
+R.br. Kiáltok teljes szívemből, * hallgass meg engem, Uram!
+R. Kiáltok teljes szívemből, * hallgass meg engem, Uram!
+V. A te igazságaidat keresem.
+R. Hallgass meg engem, Uram!
+&Gloria
+R. Kiáltok teljes szívemből, * hallgass meg engem, Uram!
+
+[Versum Dominica Nona]
+V. Az én titkonvaló bűneimből tisztíts meg engem, Uram!
+R. És a kevélységtől óvd meg a te szolgád!
+
+[Oratio Dominica Prima]
+Mindenható Úr Isten, ki e napnak kezdetéhez eljuttattál minket: erősíts meg minket kegyelmeddel, hogy e napon semmi bűnre ne hajoljunk, hanem szüntelenül igazságod megtételére irányuljon minden gondolatunk, szavunk és cselekedetünk! A napnak ezen első órájában, kérünk, Urunk, tölts be minket könyörületességeddel, hogy egész nap örvendezvén, mindig a te dicsőítésedben leljük örömünket.
+$Per Dominum
+
+[Oratio Dominica Tertia]
+Urunk, Jézus Krisztus, ki a nap harmadik órájában a világ üdvösségéért a kereszt kínjára vitetni méltóztattál: téged kérünk esedezve, töröld el vétkeinket, hogy a múltbéli gonoszságokért bocsánatot nyerjünk, a jövendőktől pedig oltalmat.
+$Qui vivis
+
+[Oratio Dominica Sexta]
+Urunk, Jézus Krisztus, ki midőn a nap hatodik órájában a világ megváltásáért a keresztfára szálltál, az egész világ sötétségbe fordult: add meg nekünk mindenkor lélekben és testben azt a világosságot, mely által érdemesnek találtatunk, téged követve, az örök életre jutni!
+$Qui vivis
+
+[Oratio Dominica Nona]
+Urunk, Jézus Krisztus, ki a nap kilencedik órájában a keresztfán úgy rendelted, hogy a bűnbánó lator a Paradicsom gyönyörűségébe általmenjen: megvallva bűneinket téged kérünk esedezve, hogy halálunk után engedj a Paradicsomba örvendezéssel belépnünk.
+$Qui vivis
+
+[Oratio Completorium]
+Isten, ki világosságot árasztasz az éjszakára is, és annak sötétsége után ismét fényt derítesz: engedd azt nekünk jóságoddal, hogy a most következő éjszakán a Sátánnak minden cselvetése nélkül menjünk át, s mire a reggel felvirrad, szent szolgálatodra újból serényen megjelenve, neked, élő és igaz Istennek hálát és dicséretet mondhassunk! Világ Üdvözítője, üdvözíts minket, mindenható Isten, s engedd nekünk az örökké tartó fényességet, add a te békédet napjainknak, a hirtelen és készületlen haláltól pedig kegyesen ments meg minket! Aki az Atyaistennel és a Szentlélekkel élsz és uralkodol, Isten, mindörökkön örökké.
+$Amen

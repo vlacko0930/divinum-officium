@@ -1,0 +1,24 @@
+# Psalterium Strigoniense (2014), vasárnapi príma, kishórák és kompletórium.
+# A zsoltárszövegek a Magyar Psalterium rendes zsoltárfájljaiból származnak.
+# A 2014-es kiadás joga: Argumentum Kiadó, Budapest;
+# szerkesztette Földváry Miklós István, Csonka Szabina Babett, Szoliva Gábriel OFM.
+# Az énekelt tételek kottája nélkül, szövegként kerültek felhasználásra.
+
+[Prima Dominica]
+Az Úr az én pásztorom, * nincsen hiányom semmiben.;;21;22
+Az én szemeim * mindenkor az Úrra néznek.;;23;24
+Az egyháznak közepette * áldalak életemmel.;;25;53
+Boldogok, * kik törvényed szerint járnak.;;117;118(1-16);118(17-32)
+Áldj meg minket, Atya, Úr Isten, * őrizz meg minket, élő Istennek Fia, Úr Jézus Krisztus, világosíts meg minket, vigasztaló Szentlélek, Úr Isten, ma és életünknek minden idejében!;;234
+
+[Tertia Dominica]
+Légy mivélünk, mindenható, egy Isten: Atya és Fiú, Szentlélek Isten!;;118(33-48);118(49-64);118(65-80)
+
+[Sexta Dominica]
+Téged egynek lényegben, háromnak személyben igaz hittel vallunk, fölséges Úr Isten.;;118(81-96);118(97-112);118(113-128)
+
+[Nona Dominica]
+Igaz hittel megvalljuk: ugyanaz benned a lét, az élet és az értelem.;;118(129-144);118(145-160);118(161-176)
+
+[Completorium]
+;;4;30(1-6);90;133

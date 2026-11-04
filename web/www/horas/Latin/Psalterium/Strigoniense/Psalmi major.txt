@@ -1,0 +1,19 @@
+# Psalterium Strigoniense (2014), Sunday psalms for Lauds and Vespers.
+# Psalm bodies are taken from the regular Latin Psalterium files.
+# Copyright of the 2014 edition: Argumentum Publishing House, Budapest;
+# edited by Miklós István Földváry, Szabina Babett Csonka, Gábor OFM Szoliva.
+# Latin text is in the public domain.
+
+[Dominica Laudes]
+Indútus est Dóminus * fortitúdinem, et præcínxit se virtúte, allelúia, allelúia, allelúia.;;92
+Glória et honor * et benedíctio sedénti super thronum, vivénti in sǽcula sæculórum!;;99
+Deus miseréatur * nostri, et benedícat nobis, illúminet vultum suum super nos, et miseréatur nostri!;;62;66
+Benedíctio et cláritas * et sapiéntia et gratiárum áctio, honor, virtus et fortitúdo Deo nostro in sǽcula sæculórum, amen!;;210
+Sanctus, sanctus, sanctus * Dóminus Deus omnípotens, qui erat et qui est et qui ventúrus est.;;148;149;150
+
+[Dominica Vespera]
+Sede a dextris meis! * Dixit Dóminus Dómino meo.;;109
+Fidélia ómnia mandáta * eius, confirmáta in sǽculum sǽculi.;;110
+In mandátis * eius volet nimis.;;111
+Sit nomen Dómini * benedíctum in sǽcula.;;112
+Nos, qui vívimus, * benedícimus Dóminum.;;113

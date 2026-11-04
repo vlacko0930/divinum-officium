@@ -1,0 +1,118 @@
+# Psalterium Strigoniense (2014): ordinary and proper texts of the Sunday day hours.
+# Psalm bodies are in the regular Psalterium/Psalmorum files.
+# Copyright of the 2014 edition: Argumentum Publishing House, Budapest;
+# edited by Miklós István Földváry, Szabina Babett Csonka, Gábor OFM Szoliva.
+# Latin text is in the public domain.  Chant notation is not included.
+
+[Dominica Laudes]
+!Apo 7:12
+v. Benedíctio, et cláritas, et sapiéntia, et gratiárum áctio, honor, virtus, et fortitúdo Deo nostro in sǽcula sæculórum. Amen.
+$Deo gratias
+
+[Dominica Vespera]
+!2 Thess 3:5
+v. Dóminus autem dírigat corda et córpora nostra in caritáte Dei et patiéntia Christi!
+$Deo gratias
+
+[Dominica Ant Laudes]
+Allelúia, allelúia, allelúia.
+
+[Dominica Ant Vespera]
+Tua est poténtia, tuum regnum, Dómine, tu es super omnes gentes, da pacem, Dómine, in diébus nostris!
+
+[Dominica Versum 2]
+V. Dóminus regnávit, exsúltet terra!
+R. Læténtur ínsulæ multæ!
+
+[Dominica Versum 3]
+V. Dirigátur, Dómine, orátio mea!
+R. Sicut incénsum in conspéctu tuo!
+
+[Oratio Dominica Laudes]
+Vox nostra te, Dómine, semper deprecétur, et ad aures tuæ pietátis ascéndat!
+$Per Dominum
+
+[Oratio Dominica Vespera]
+Víncula, Dómine, quǽsumus, humánæ pravitátis abrúmpe, ut, ad confiténdum nomen tuum, líbera mente currámus.
+$Per Dominum
+
+[Capitulum Dominica Prima]
+!1 Tim 1:17
+v. Regi autem sæculórum, immortáli, invisíbili, soli Deo honor et glória in sǽcula sæculórum, amen!
+$Deo gratias
+
+[Dominica Tertia]
+!Jer 17:14
+v. Sana me, Dómine, et sanábor, salvum me fac, et salvus ero, quóniam laus mea tu es!
+$Deo gratias
+
+[Dominica Sexta]
+!Gal 6:2
+v. Alter altérius ónera portáte, et sic adimplébitis legem Christi!
+$Deo gratias
+
+[Dominica Nona]
+!1 Cor 6:20
+v. Empti enim estis prétio magno; glorificáte Deum et portáte Deum in corde et córpore vestro!
+$Deo gratias
+
+[Completorium]
+!Jer 14:9
+v. Tu in nobis es, Dómine, et nomen sanctum tuum invocátum est super nos: ne derelínquas nos, Dómine, Deus noster!
+$Deo gratias
+
+[Responsory breve Dominica Tertia]
+R.br. Inclína cor meum, Deus, * In testimónia tua.
+R. Inclína cor meum, Deus, * In testimónia tua.
+V. Avérte óculos meos, ne vídeant vanitátem: in via tua vivífica me.
+R. In testimónia tua.
+&Gloria
+R. Inclína cor meum, Deus, * In testimónia tua.
+
+[Versum Dominica Tertia]
+V. Adiútor meus esto, Dómine, ne derelínquas me!
+R. Neque despícias me, Deus, salutáris meus!
+
+[Responsory breve Dominica Sexta]
+R.br. In ætérnum, Dómine, * Pérmanet verbum tuum.
+R. In ætérnum, Dómine, * Pérmanet verbum tuum.
+V. In cælo et in sǽculum sǽculi véritas tua.
+R. Pérmanet verbum tuum.
+&Gloria
+R. In ætérnum, Dómine, * Pérmanet verbum tuum.
+
+[Versum Dominica Sexta]
+V. Dóminus regit me, et nihil mihi déerit.
+R. In loco páscuæ, ibi me collocávit.
+
+[Responsory breve Dominica Nona]
+R.br. Clamávi in toto corde, * Exáudi me, Dómine!
+R. Clamávi in toto corde, * Exáudi me, Dómine!
+V. Iustificatiónes tuas requíram.
+R. Exáudi me, Dómine!
+&Gloria
+R. Clamávi in toto corde, * Exáudi me, Dómine!
+
+[Versum Dominica Nona]
+V. Ab occúltis meis munda me, Dómine!
+R. Et ab aliénis parce servo tuo!
+
+[Oratio Dominica Prima]
+Dómine, sancte Pater omnípotens, ætérne Deus, qui nos peccatóres ad princípium huius diéi perveníre fecísti: tua nos, quǽsumus, hódie salva virtúte, et concéde, ut in hac die ad nullum declinémus mortále peccátum, nec ullum incurrámus perículum, sed semper ad tuam iustítiam faciéndam omnis nostra áctio tuo moderámine dirigátur. In hac hora prima huius diéi tua nos, quǽsumus, Dómine, reple misericórdia, ut, per totum diem exsultántes, in tuis iúgiter láudibus delectémur.
+$Per Dominum
+
+[Oratio Dominica Tertia]
+Dómine, Iesu Christe, qui hora diéi tértia ad Crucis pœnam pro salúte mundi duci dignátus es: te súpplices deprecámur, ut nostra déleas peccáta, et, ut de prætéritis malis véniam apud te habére mereámur et de futúris custódiam.
+$Qui vivis
+
+[Oratio Dominica Sexta]
+Dómine, Iesu Christe, qui, dum hora sexta diéi pro redemptióne mundi Crucis lignum ascendísti, totus mundus in ténebras convérsus est: illam nobis lucem in ánima et córpore nostro semper tríbue, per quam ad ætérnam vitam, te ducénte, perveníre mereámur!
+$Qui vivis
+
+[Oratio Dominica Nona]
+Dómine, Iesu Christe, qui hora diéi nona in Crucis patíbulo confiténtem latrónem intra amǽna paradísi transíre iussísti: te supplíciter deprecámur, confiténtes peccáta nostra, ut post óbitum nostrum paradísum introíre gaudéntes concédas.
+$Qui vivis
+
+[Oratio Completorium]
+Deus, qui illúminas noctem et lucem post ténebras facis: concéde propítius, ut hanc noctem sine impediménto Sátanæ transeámus atque in matutínis horis ad sanctum servítium tuum recurréntes, tibi, Dómino, Deo vivo et vero, grátias et laudes referámus! Salvátor mundi, salva nos, omnípotens Deus, et lucem nobis concéde perpétuam, et pacem tuam nostris concéde tempóribus; a subitánea et improvísa morte nos erípere dignéris! Qui cum Deo Patre et Spíritu Sancto vivis et regnas, Deus, per ómnia sǽcula sæculórum.
+$Amen

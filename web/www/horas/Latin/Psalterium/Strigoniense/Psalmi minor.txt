@@ -1,0 +1,24 @@
+# Psalterium Strigoniense (2014), Sunday Prime, little hours, and Compline.
+# Psalm bodies are taken from the regular Latin Psalterium files.
+# Copyright of the 2014 edition: Argumentum Publishing House, Budapest;
+# edited by Miklós István Földváry, Szabina Babett Csonka, Gábor OFM Szoliva.
+# Latin text is in the public domain.
+
+[Prima Dominica]
+Dóminus regit me, * et nihil mihi déerit, in loco páscuæ, ibi me collocávit.;;21;22
+Oculi mei * semper ad Dóminum.;;23;24
+In médio ecclésiæ * laudábo te in vita mea, Deus meus.;;25;53
+Beáti, qui ámbulant * in lege tua, Dómine.;;117;118(1-16);118(17-32)
+Benedícat nos Deus Pater, * custódiat nos Iesus Christus, illúminet nos Spíritus Sanctus ómnibus diébus vitæ nostræ; confírmet nos virtus Christi, intercedéntibus sanctis suis, indúlgeat nobis Dóminus univérsa delícta nostra, allelúia.;;234
+
+[Tertia Dominica]
+Adésto, Deus unus, omnípotens, Pater et Fílius et Spíritus Sanctus!;;118(33-48);118(49-64);118(65-80)
+
+[Sexta Dominica]
+Te unum in substántia, trínum in persónis confitémur, summe Deus.;;118(81-96);118(97-112);118(113-128)
+
+[Nona Dominica]
+Te semper idem esse, vívere et intellegere profitémur.;;118(129-144);118(145-160);118(161-176)
+
+[Completorium]
+;;4;30(1-6);90;133
