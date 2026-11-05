@@ -24,6 +24,12 @@ sub occurrence {
   # globals readonly
   our ($testmode, $hora, $missa, $caller, $datafolder, $lang2);
 
+  # TEMPORARY: the Strigoniense proper/calendar is not yet available, and the
+  # version inherits the Trident sanctoral.  It is put into temporal mode below
+  # (once the day's temporal file is known), so that inherited saints do not
+  # appear.  Remove this once the Esztergom proper exists.
+  local $testmode = $testmode;
+
   # globals set/mod here
   our ($winner, $rank, $commemoratio, $comrank, $commune, $communetype);
   our ($tname, $sname, $sanctoraloffice);
@@ -59,6 +65,27 @@ sub occurrence {
     $sday = get_sday($month, $day, $year);                      # get office string mm-dd for Sanctoral office
     $weekname = $dayname[0];
     $dayofweek = day_of_week($day, $month, $year);              # 0 = Sunday, 1 = Mpnday, etc.
+  }
+
+  # TEMPORARY: Strigoniense has no proper/calendar of its own yet, so use the
+  # temporal office instead of the inherited Trident sanctoral.  Only do this
+  # when the temporal file is a real office; "vide Sancti" stubs (for example
+  # the Christmas octave) and missing files fall back to the inherited office.
+  if ($version =~ /^Strigoniense/i) {
+    my $force_tday = subdirname('Tempora', $version)
+      . "$weekname"
+      . (($weekname !~ /Nat/i) ? "-$dayofweek" : "");
+    my $force_tfile = "$datafolder/Latin/$force_tday.txt";
+
+    if (-e $force_tfile && open(my $fh, '<:encoding(UTF-8)', $force_tfile)) {
+      local $/;
+      my $text = <$fh> || '';
+      close $fh;
+      my $rank = $text;
+      $rank =~ s/\A.*?\[Rank\]\s*//s;
+      $rank =~ s/\[.*//s;
+      $testmode = 'Temporal' unless $rank =~ /vide\s+Sancti/i;
+    }
   }
 
   my @officename = ($weekname, '', '');
@@ -426,7 +453,8 @@ sub occurrence {
     && $srank[2] < 1.4
     && !$transfervigil
     && (!$tommorow || $version =~ /196/)
-    && $testmode ne 'Sanctoral')
+    && $testmode ne 'Sanctoral'
+    && $version !~ /^Strigoniense/i)
   {
     $scriptura = $tname unless $tomorrow;
 
