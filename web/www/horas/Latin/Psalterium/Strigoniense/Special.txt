@@ -1,4 +1,4 @@
-# Psalterium Strigoniense (2014): ordinary and proper texts of the Sunday day hours.
+# Psalterium Strigoniense (2014): ordinary and proper texts of the Sunday and ferial day hours.
 # Psalm bodies are in the regular Psalterium/Psalmorum files.
 # Copyright of the 2014 edition: Argumentum Publishing House, Budapest;
 # edited by Miklós István Földváry, Szabina Babett Csonka, Gábor OFM Szoliva.
@@ -116,3 +116,604 @@ $Qui vivis
 [Oratio Completorium]
 Deus, qui illúminas noctem et lucem post ténebras facis: concéde propítius, ut hanc noctem sine impediménto Sátanæ transeámus atque in matutínis horis ad sanctum servítium tuum recurréntes, tibi, Dómino, Deo vivo et vero, grátias et laudes referámus! Salvátor mundi, salva nos, omnípotens Deus, et lucem nobis concéde perpétuam, et pacem tuam nostris concéde tempóribus; a subitánea et improvísa morte nos erípere dignéris! Qui cum Deo Patre et Spíritu Sancto vivis et regnas, Deus, per ómnia sǽcula sæculórum.
 $Amen
+
+# Ferial day hours.  The psalm distribution and antiphons are those of the
+# Tridentine ferial psalter; the following are the Strigoniense proper texts.
+
+[Feria Laudes]
+!1 Cor 16:13-14
+v. Fratres. Vigiláte et oráte et state in fide, viríliter ágite, et confortámini in Dómino, et ómnia ópera vestra cum caritáte fiant!
+$Deo gratias
+
+[Feria Vespera]
+!2 Thess 3:5
+v. Dóminus autem dírigat corda et córpora nostra in caritáte Dei et patiéntia Christi!
+$Deo gratias
+
+[Feria Vespera] (feria 7)
+!Rom 11:33
+v. O, altitúdo divitiárum sapiéntiæ et sciéntiæ Dei! Quam incomprehensibília sunt iudícia eius, et investigábiles viæ eius!
+$Deo gratias
+
+[Feria Versum 2]
+V. In matutínis, Dómine, meditábor in te.
+R. Quia fuísti adiútor meus.
+
+[Feria Versum 3]
+V. Dirigátur, Dómine, orátio mea!
+R. Sicut incénsum in conspéctu tuo!
+
+[Feria Versum 3] (feria 7)
+V. Vespertína orátio ascéndat ad te, Dómine!
+R. Et descéndat super nos misericórdia tua!
+
+[Feria2 Ant 2]
+Benedíctus Deus Israel.
+
+[Feria2 Ant 3]
+Magníficat ánima mea Dóminum, quia respéxit Deus humilitátem meam.
+
+[Feria3 Ant 2]
+Eréxit Dóminus nobis cornu salútis in domo David, púeri sui.
+
+[Feria3 Ant 3]
+Exsúltet spíritus meus in Dómino, Deo, salutári meo.
+
+[Feria4 Ant 2]
+Salútem ex inimícis nostris, et de manu ómnium, qui nos odérunt, líbera nos, Dómine!
+
+[Feria4 Ant 3]
+Respéxit Dóminus humilitátem meam, et fecit in me magna, quia potens est.
+
+[Feria5 Ant 2]
+In sanctitáte servíámus Dómino, et liberábit nos ab inimícis nostris!
+
+[Feria5 Ant 3]
+Fac, Deus, poténtiam in bráchio tuo: dispérde supérbos, et exálta húmiles!
+
+[Feria6 Ant 2]
+Per víscera misericórdiæ Dei nostri, in quibus visitávit nos Oriens ex alto.
+
+[Feria6 Ant 3]
+Depósuit poténtes, sanctos persequéntes, et exaltávit húmiles, Christum confiténtes.
+
+[Sabbato Ant 2]
+Illumináre, Dómine, his, qui in ténebris sedent, ad dirigéndos pedes nostros in viam pacis, Deus Israel!
+
+[Sabbato Ant 3]
+Peccáta mea, Dómine, sicut sagíttæ, infíxa sunt in me. Sed ántequam vúlnera génerent in me, sana me, Dómine, medicaménto pæniténtiæ, Deus!
+
+[Oratio Feria2 Laudes]
+Vide, Dómine, infirmitátes nostras, et céléri nobis pietáte succúrre!
+$Per Dominum
+
+[Oratio Feria2 Vespera]
+Esto nobis propítius, Deus, ut tua nos misericórdia subsequátur!
+$Per Dominum
+
+[Oratio Feria3 Laudes]
+Céléri nobis, quǽsumus, Dómine, pietáte succúrre, ut devótio supplicántum ad gratiárum tránseat actiónem.
+$Per Dominum
+
+[Oratio Feria3 Vespera]
+Absólve, Dómine, quǽsumus, nostrórum víncula peccatórum, et, quicquid pro eis merémur, avérte.
+$Per Dominum
+
+[Oratio Feria4 Laudes]
+Clamántes ad te, Deus, dignánter exáudi, ut nos de profúndo iniquitátis erípias et ad gáudia ætérna perdúcas!
+$Per Dominum
+
+[Oratio Feria4 Vespera]
+Tua nos, quǽsumus, grátia semper et prævéniat et sequátur, ac bonis opéribus iúgiter præstet esse inténtos.
+$Per Dominum
+
+[Oratio Feria5 Laudes]
+Tuére nos, supérne moderátor, et fragilitátem nostram tuis defénde præsídiis!
+$Per Dominum
+
+[Oratio Feria5 Vespera]
+Aufer a nobis, quǽsumus, Dómine, pravitátes, ut non indignatiónem tuam, sed indulgéntiam sentiámus.
+$Per Dominum
+
+[Oratio Feria6 Laudes]
+Oculi nostri ad te, Dómine, semper inténdant, ut auxílium tuum et misericórdiam sentiámus!
+$Per Dominum
+
+[Oratio Feria6 Vespera]
+Pórrige nobis, Deus, déxteram tuam, et auxílium nobis supérnæ virtútis impénde!
+$Per Dominum
+
+[Oratio Sabbato Laudes]
+Inténde, Dómine, quǽsumus, súpplices tuos, et páriter nobis indulgéntiam tríbue benígnus, et gáudium.
+$Per Dominum
+
+[Oratio Sabbato Vespera]
+Iniquitátes nostras ne respícias, Deus, sed sola nobis misericórdia tua prosit indígnis!
+$Per Dominum
+
+# Ferial little hours.  The psalms, antiphons and orations agree with the
+# Tridentine ferial cursus; the capitula and short responsories are given here
+# so that the Strigoniense text is used in both languages.
+
+[Capitulum Feria Prima]
+!Joel 2:32
+v. Omnis homo, quicúmque invocáverit nomen Dómini, salvus erit in Christo Iesu, Dómino nostro!
+$Deo gratias
+
+[Feria Tertia]
+@:Dominica Tertia
+
+[Responsory breve Feria Tertia]
+R.br. Sana ánimam meam, * Quia peccávi tibi.
+R. Sana ánimam meam, * Quia peccávi tibi.
+V. Ego dixi: Dómine, miserére mei.
+R. Quia peccávi tibi.
+&Gloria
+R. Sana ánimam meam, * Quia peccávi tibi.
+
+[Versum Feria Tertia]
+V. Adiútor meus esto, Dómine, ne derelínquas me!
+R. Neque despícias me, Deus, salutáris meus!
+
+[Feria Sexta]
+@:Dominica Sexta
+
+[Responsory breve Feria Sexta]
+R.br. Benedícam Dóminum * In omni témpore.
+R. Benedícam Dóminum * In omni témpore.
+V. Semper laus eius in ore meo.
+R. In omni témpore.
+&Gloria
+R. Benedícam Dóminum * In omni témpore.
+
+[Versum Feria Sexta]
+@:Versum Dominica Sexta
+
+[Feria Nona]
+@:Dominica Nona
+
+[Responsory breve Feria Nona]
+R.br. Rédime me, Dómine, * Et miserére mei.
+R. Rédime me, Dómine, * Et miserére mei.
+V. Pes enim meus stetit in via recta.
+R. Et miserére mei.
+&Gloria
+R. Rédime me, Dómine, * Et miserére mei.
+
+[Versum Feria Nona]
+@:Versum Dominica Nona
+
+[Oratio Feria Prima]
+@:Oratio Dominica Prima
+
+[Oratio Feria Tertia]
+@:Oratio Dominica Tertia
+
+[Oratio Feria Sexta]
+@:Oratio Dominica Sexta
+
+[Oratio Feria Nona]
+@:Oratio Dominica Nona
+
+[Hymnus Day0 Laudes]
+v. Ecce, iam noctis tenuátur umbra,
+lucis auróra rútilans corúscat.
+Nísibus totis rogitémus omnes
+Cunctipoténtem, Amen.
+_
+Ut Deus, nostri miserátus, omnem
+pellat languórem, tríbuat salútem,
+donet et nobis pietáte Patris
+regna polórum!
+_
+Præstet hoc nobis Déitas beáta
+Patris ac Nati paritérque Sancti
+Spíritus, cuius réboat in omni
+glória mundo! Amen.
+
+[Hymnus Day0 Vespera]
+v. Lucis Creátor óptime,
+lucem diérum próferens,
+primórdiis lucis novæ
+mundi parans oríginem,
+_
+Qui mane iunctum vésperi
+diem vocári prǽcipis:
+tætrum chaos illábitur,
+audi preces cum flétibus!
+_
+Cælórum pulset íntimum,
+vitále tollat prǽmium,
+vitémus omne nóxium,
+purgémus omne péssimum!
+_
+Ne mens, graváta crímine,
+vitæ sit exsul múnere,
+dum nil perénne cógitat,
+seséque culpis ílligat!
+_
+Præsta, Pater piíssime
+Patríque compar Unice
+cum Spíritu Paráclito,
+regnans per omne sǽculum!
+Amen.
+
+[Hymnus Day1 Laudes]
+v. Splendor patérnæ glóriæ,
+de luce lucem próferens,
+lux lucis et fons lúminis,
+dies diem illúminans,
+_
+Verúsque sol: illábere,
+micans nitóre pérpeti,
+iubárque Sancti Spíritus
+infúnde nostris sénsibus!
+_
+Infórmet actus strénuos,
+dentem retúndat ínvidi,
+casus secúndet ásperos,
+donet geréndi grátiam!
+_
+Votis vocémus et Patrem,
+Patrem perénnis glóriæ,
+Patrem poténtis grátiæ,
+culpam reléget lúbricam!
+_
+Mentem gubérnet et regat
+casto, fidéli córpore,
+fides calóre férveat,
+fraudis venéna nésciat!
+_
+Christúsque nobis sit cibus,
+potúsque noster sit fides,
+læti bibámus sóbriam
+ebrietátem Spíritus!
+_
+Auróra cursus próvehit,
+auróra totus pródeat,
+in Patre totus Fílius,
+et totus in Verbo Pater.
+_
+Lætus dies hic tránseat,
+pudor sit, ut dilúculum,
+fides, velut merídies,
+crepúsculum mens nésciat!
+_
+Deo Patri sit glória
+eiúsque soli Fílio
+cum Spíritu Paráclito
+et nunc et in perpétuum!
+Amen.
+
+[Hymnus Day1 Vespera]
+v. Imménse cæli Cónditor,
+qui mixta, ne confúnderent,
+aquæ fluénta dívidens,
+cælum dedísti límitem,
+_
+Firmans locum cæléstibus,
+simúlque terræ rívulis,
+ut unda flammas témperet,
+terræ solum ne díssipent:
+_
+Lucem fides invéniat,
+sic lúminis iubar ferat,
+hæc vana cuncta térreat,
+hanc falsa nulla cómprimant!
+_
+Infúnde nunc, piíssime,
+donum perénnis grátiæ,
+fraudis novæ ne cásibus
+nos error átterat vetus!
+_
+Præsta, Pater piíssime
+Patríque compar Unice
+cum Spíritu Paráclito,
+regnans per omne sǽculum!
+Amen.
+
+[Hymnus Day2 Laudes]
+v. Ales diéi núntius
+lucem propínquam prǽcinit,
+nos excitátor méntium,
+iam Christus ad vitam vocat.
+_
+Auférte, clamat, léctulos
+ægros, sopóre désides,
+castéque recte ac sóbrie
+vigiláte, iam sum próximus!
+_
+Iesum ciámus vócibus
+flentes, precántes sóbrie;
+inténta supplicátio
+dormíre cor mundum vetat!
+_
+Tu, Christe, somnum díssice,
+tu rumpe noctis víncula,
+tu solve peccátum vetus,
+novúmque lumen íngere!
+_
+Deo Patri sit glória
+eiúsque soli Fílio
+cum Spíritu Paráclito
+et nunc et in perpétuum!
+Amen.
+
+[Hymnus Day2 Vespera]
+v. Tellúris ingens Cónditor,
+mundi solum qui éruens,
+pulsis aquæ moléstiis,
+terram dedísti immóbilem,
+_
+Ut, germen aptum próferens,
+fulvis decóra flóribus,
+fecúnda fructu sísteret,
+pastúmque gratum rédderet:
+_
+Iussis tuis obtémperet,
+nullis malis appróximet,
+bonis repléri gáudeat,
+et mortis actum nésciat!
+_
+Mentis perústæ vúlnera
+munda viróris grátia,
+ut facta fletu díluat,
+motúsque pravos átterat!
+_
+Præsta, Pater piíssime
+Patríque compar Unice
+cum Spíritu Paráclito,
+regnans per omne sǽculum!
+Amen.
+
+[Hymnus Day3 Laudes]
+v. Nox et ténebræ et núbila,
+confúsa mundi et túrbida:
+lux intrat, albéscit polus,
+Christus venit, discédite!
+_
+Calígo terræ scínditur,
+percússa solis spículo,
+rebúsque iam color redit
+vultu niténtis síderis.
+_
+Sunt multa fucis íllita,
+quæ luce purgéntur tua,
+tu, lux Eói síderis,
+vultu seréno illúmina!
+_
+Te, Christe, solum nóvimus,
+te mente pura et símplici
+flendo et canéndo quǽsumus:
+Inténde nostris sénsibus!
+_
+Deo Patri sit glória
+eiúsque soli Fílio
+cum Spíritu Paráclito
+et nunc et in perpétuum!
+Amen.
+
+[Hymnus Day3 Vespera]
+v. Cæli Deus sanctíssime,
+qui lúcidum centrum poli
+candóre pingis ígneo,
+augens decóro lúmine,
+_
+Quarto die qui flámmeam
+solis rotam constítuens,
+lunæ minístras órdini
+vagos recúrsus síderum,
+_
+Illúmina cor hóminum,
+abstérge sordes méntium,
+resólve culpæ vínculum,
+evérte moles críminum!
+_
+Ut nóctibus vel lúmini
+direptiónis términum,
+primórdiis et ménsium
+signum daret notíssimum:
+_
+Præsta, Pater piíssime
+Patríque compar Unice
+cum Spíritu Paráclito,
+regnans per omne sǽculum!
+Amen.
+
+[Hymnus Day4 Laudes]
+v. Lux, ecce, surgit áurea,
+pallens fatíscat cǽcitas,
+quæ nosmet in præceps diu
+erróre traxit dévio!
+_
+Hæc lux serénum cónferat,
+purósque nos præstet sibi,
+nihil loquámur súbdolum,
+volvámus obscúrum nihil!
+_
+Speculátor astat désuper,
+qui nos diébus ómnibus
+actúsque nostros próspicit
+a luce prima in vésperum.
+_
+Sic tota decúrrat dies,
+nec lingua mendax, nec manus,
+óculi nec peccent lúbrici,
+nec noxa corpus ínquinet!
+_
+Deo Patri sit glória
+eiúsque soli Fílio
+cum Spíritu Paráclito
+et nunc et in perpétuum!
+Amen.
+
+[Hymnus Day4 Vespera]
+v. Magnæ Deus poténtiæ,
+qui ex aquis ortum genus
+partim relínquis gúrgiti,
+partim levas in áera,
+_
+Dimérsa lymphis ímprimens,
+subvécta cælis írrogans,
+ut stirpe una pródita
+divérsa rápiant loca:
+_
+Ut culpa nullum déprimat,
+nullum levet iactántia,
+elísa mens ne cóncidat,
+eláta mens ne córruat!
+_
+Largíre cunctis sérvulis,
+quos mundat unda sánguinis,
+nescíre lapsus críminum,
+nec ferre mortis tǽdium,
+_
+Præsta, Pater piíssime
+Patríque compar Unice
+cum Spíritu Paráclito,
+regnans per omne sǽculum!
+Amen.
+
+[Hymnus Day5 Laudes]
+v. Ætérna cæli glória,
+beáta spes mortálium,
+Celsitonántis Unice
+castǽque proles Vírginis:
+_
+Da déxteram surgéntibus,
+exsúrgat et mens sóbria,
+flagránsque in laudem Dei
+grates repéndat débitas!
+_
+Quæsíta iam primum fides
+radícet altis sénsibus,
+secúnda spes congáudeat,
+qua maior exstat cáritas!
+_
+Ortus refúlget lúcifer,
+sparsámque lucem núntiat,
+cadit calígo nóctium,
+lux sancta nos illúminet!
+_
+Deo Patri sit glória
+eiúsque soli Fílio
+cum Spíritu Paráclito
+et nunc et in perpétuum!
+_
+Manénsque nostris sénsibus,
+noctem repéllat sǽculi,
+omníque fine díei
+purgáta servet péctora!
+Amen.
+
+[Hymnus Day5 Vespera]
+v. Plasmátor hóminis, Deus,
+qui, cuncta solus órdinans,
+humum iubes prodúcere
+reptántis et feræ genus,
+_
+Qui magna rerum córpora,
+dictu iubéntis vívida,
+ut sérviant per órdinem,
+subdens dedísti hómini:
+_
+Da gaudiórum prǽmia,
+da gratiárum múnera,
+dissólve litis víncula,
+astrínge pacis fœ́dera!
+_
+Repélle a servis tuis,
+quicquid per immundítiam
+aut móribus se súggerit,
+aut áctibus se intérserit!
+_
+Præsta, Pater piíssime
+Patríque compar Unice
+cum Spíritu Paráclito,
+regnans per omne sǽculum!
+Amen.
+
+[Hymnus Day6 Laudes]
+v. Auróra iam spargit polum,
+terris dies illábitur,
+lucis resúltat spículum,
+discédat omne lúbricum!
+_
+Phantásma noctis décidat,
+mentis reátus súbruat,
+quicquid ténebris hórridum
+nox áttulit culpæ, cadat,
+_
+Deo Patri sit glória
+eiúsque soli Fílio
+cum Spíritu Paráclito
+et nunc et in perpétuum!
+_
+Ut mane illud últimum,
+quod præstolámur cérnui,
+in lucem nobis éffluat,
+dum hoc canóre cóncrepat!
+Amen.
+
+[Hymnus Day6 Vespera]
+v. Deus, creátor ómnium
+políque rector, véstiens
+diem decóro lúmine,
+noctem sopóris grátia,
+_
+Artus solútos ut quies
+reddat labóris úsui,
+mentésque fessas állevet,
+luctúsque solvat ánxios:
+_
+Dormíre mentem ne sinas,
+dormíre culpa nóverit,
+castos fides refrígeret,
+somni vapórem témperet!
+_
+Grates, perácto iam die,
+et noctis exórtu preces,
+votis reos ut ádiuves,
+hymnum canéntes sólvimus.
+_
+Exúta sensu lúbrico,
+te cordis alta sómnient,
+ne hostis ínvidi dolo
+pavor quiétos súscitet!
+_
+Te cordis ima cóncinant,
+te vox canóra cóncrepet,
+te díligat castus amor,
+te mens adóret sóbria,
+_
+Christum rogémus et Patrem,
+Christi Patrísque Spíritum,
+unum potens per ómnia,
+fove precántes, Trínitas!
+_
+Ut, cum profúnda cláuserit
+diem calígo nóctium,
+fides ténebras nésciat,
+et lux fidéi lúceat!
+Amen.
+
+[Hymnus Day6 Vespera] (tempore post Pentecosten)
+v. O, Pater sancte, mitis atque pie,
+o, Iesu Christe, Fili veneránde
+Paraclíteque Spíritus et alme,
+Deus ætérne, Amen.
+_
+Trínitas sancta unitásque firma,
+Déitas vera, bónitas imménsa,
+lux angelórum, salus orphanórum
+spesque cunctórum:
+_
+Sérviunt tibi cuncta, quæ creásti,
+te tuæ cunctæ laudant creatúræ,
+nos quoque tibi psállimus devóti,
+tu nos exáudi!
+_
+Glória tibi, omnípotens Deus,
+trinus et unus, magnus et excélsus,
+te decet hymnus, honor, laus et decus
+nunc et in ævum. Amen.

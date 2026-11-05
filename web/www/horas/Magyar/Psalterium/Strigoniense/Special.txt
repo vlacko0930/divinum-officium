@@ -1,4 +1,4 @@
-# Psalterium Strigoniense (2014): a vasárnapi nappali zsolozsma ordináriuma és tulajdon szövegei.
+# Psalterium Strigoniense (2014): a vasárnapi és hétköznapi nappali zsolozsma ordináriuma és tulajdon szövegei.
 # A zsoltárszövegek a rendes Psalterium/Psalmorum fájlokból származnak.
 # A 2014-es kiadás joga: Argumentum Kiadó, Budapest;
 # szerkesztette Földváry Miklós István, Csonka Szabina Babett, Szoliva Gábriel OFM.
@@ -254,3 +254,560 @@ $Qui vivis
 [Oratio Completorium]
 Isten, ki világosságot árasztasz az éjszakára is, és annak sötétsége után ismét fényt derítesz: engedd azt nekünk jóságoddal, hogy a most következő éjszakán a Sátánnak minden cselvetése nélkül menjünk át, s mire a reggel felvirrad, szent szolgálatodra újból serényen megjelenve, neked, élő és igaz Istennek hálát és dicséretet mondhassunk! Világ Üdvözítője, üdvözíts minket, mindenható Isten, s engedd nekünk az örökké tartó fényességet, add a te békédet napjainknak, a hirtelen és készületlen haláltól pedig kegyesen ments meg minket! Aki az Atyaistennel és a Szentlélekkel élsz és uralkodol, Isten, mindörökkön örökké.
 $Amen
+
+# Hétköznapi nappali zsolozsma.  A zsoltárelosztás és a zsoltárantifónák a
+# hétköznapi zsoltároskönyvből valók; az alábbiak a Strigoniense tulajdon
+# szövegei.
+
+[Feria Laudes]
+!1Kor 16:13-14
+v. Testvérek! Virrasszatok és imádkozzatok, legyetek állhatatosak a hitben, cselekedjetek férfiasan, erősödjetek meg az Úrban, és minden dolgotokat szeretetben cselekedjétek!
+$Deo gratias
+
+[Feria Vespera]
+@:Dominica Vespera
+
+[Feria Vespera] (feria 7)
+!Róm 11:33
+v. Ó, Isten gazdagságának, bölcsességének és tudásának mélysége; mely igen megfoghatatlanok az ő ítéletei, és felkutathatatlanok az ő útjai!
+$Deo gratias
+
+[Feria Versum 2]
+V. Már kora reggel rólad gondolkodom, Uram.
+R. Mert te lettél az én segítőm.
+
+[Feria Versum 3]
+V. Szálljon fel, Uram, az én imádságom!
+R. Miként a tömjénfüst, a te színed elé!
+
+[Feria Versum 3] (feria 7)
+V. Alkonyati imádságunk szálljon fel hozzád, Urunk!
+R. És szálljon alá a te irgalmasságod mireánk!
+
+[Feria2 Ant 2]
+Áldott az Úr, Izráel Istene.
+
+[Feria2 Ant 3]
+Magasztalja az én lelkem az Urat, mert rátekintett az Isten alázatosságomra.
+
+[Feria3 Ant 2]
+Fölemelte nékünk az Isten az üdvösség erejét, az ő szolgájának, Dávidnak házában.
+
+[Feria3 Ant 3]
+Örvendezik az én lelkem üdvözítő Istenemben.
+
+[Feria4 Ant 2]
+Adj szabadulást ellenségeinktől, gyűlölőink kezéből ments meg minket, Urunk!
+
+[Feria4 Ant 3]
+Megláttad kicsinységemet, Uram.
+
+[Feria5 Ant 2]
+Szolgáljunk az Úrnak szentségben, megszabadít minket ellenségeinktől!
+
+[Feria5 Ant 3]
+Cselekedjél, Isten, hatalmasságot: szórd szét a gőgöst, s az alázatost fölmagasztald!
+
+[Feria6 Ant 2]
+Irgalmának mélységei által meglátogatott minket a magasságból támadó.
+
+[Feria6 Ant 3]
+Letette a kevélyeket, szentek üldözőit, felvette a kicsinyeket, Krisztus megvallóit.
+
+[Sabbato Ant 2]
+Világosítsd meg azokat, Urunk, kik sötétségben ülnek, s a békesség útjára igazítsd lépteinket!
+
+[Sabbato Ant 3]
+Bűneim, mint a nyílvesszők, átszúrtak engem, meg ne haljak sebeimben: gyógyíts meg engem, Uram, a bűnbánat gyógyszerével!
+
+[Oratio Feria2 Laudes]
+Lásd meg, Urunk, a mi gyöngeségeinket, és kegyességeddel siess a mi segítségünkre!
+$Per Dominum
+
+[Oratio Feria2 Vespera]
+Légy kegyelmes hozzánk, Isten, hogy a te könyörületed járjon nyomunkban!
+$Per Dominum
+
+[Oratio Feria3 Laudes]
+Siess, kérünk, Urunk, kegyességeddel megsegíteni minket, hogy a hozzád esdeklők odaadása malasztod kieszközlője legyen.
+$Per Dominum
+
+[Oratio Feria3 Vespera]
+Oldd föl, Urunk, kérünk, a mi vétkeink bilincseit, és fordítsd el tőlünk mindazt, amit általuk érdemelnénk.
+$Per Dominum
+
+[Oratio Feria4 Laudes]
+Méltóztassál, Isten, meghallani a hozzád kiáltók szavát, hogy minket az álnokság mélyéből kiragadj és az örök boldogságra elvezess!
+$Per Dominum
+
+[Oratio Feria4 Vespera]
+Járjon előttünk, kérjük, Urunk, és kísérjen a te malasztod mindenkor, és adja meg a jócselekedetekben végig kitartanunk.
+$Per Dominum
+
+[Oratio Feria5 Laudes]
+Vigyázz reánk, mennyei parancsolónk, és törékenységünket védd meg a te oltalmaddal!
+$Per Dominum
+
+[Oratio Feria5 Vespera]
+Vedd el tőlünk, kérjük, Urunk, a hitványságot, hogy ne haragodat, hanem megbocsátásodat érezhessük.
+$Per Dominum
+
+[Oratio Feria6 Laudes]
+Szemeink, Urunk, mindig terád figyelmezzenek, hogy segítő és könyörületes voltodat érezhessük!
+$Per Dominum
+
+[Oratio Feria6 Vespera]
+Nyújtsd ki nekünk, Isten, a te jobbodat, és mennyei erődnek segítségét terjeszd fölénk!
+$Per Dominum
+
+[Oratio Sabbato Laudes]
+Figyelmezz, kérjük, Urunk, a hozzád esdeklőkre, és adj nekünk jóságosan megbocsátást és vele örömet!
+$Per Dominum
+
+[Oratio Sabbato Vespera]
+Ne tekintsd, Isten, álnokságainkat, hanem váljék javunkra, jóllehet méltatlanoknak, egyedül a te irgalmad!
+$Per Dominum
+
+# Hétköznapi kisórák.  A zsoltárok, antifónák és könyörgések megegyeznek a
+# hétköznapi zsolozsmával; a kapitulumokat és rövid responzóriumokat innen
+# vesszük, hogy mindkét nyelven a Strigoniense szövege szólaljon meg.
+
+[Capitulum Feria Prima]
+!Joel 2:32
+v. Minden ember, aki segítségül hívja az Úr nevét, üdvözül Krisztus Jézusban, a mi Urunkban!
+$Deo gratias
+
+[Feria Tertia]
+@:Dominica Tertia
+
+[Responsory breve Feria Tertia]
+R.br. Gyógyítsd meg az én lelkemet, * mert vétkeztem ellened!
+R. Gyógyítsd meg az én lelkemet, * mert vétkeztem ellened!
+V. Mondtam az Úrnak: Könyörülj rajtam!
+R. Mert vétkeztem ellened.
+&Gloria
+R. Gyógyítsd meg az én lelkemet, * mert vétkeztem ellened!
+
+[Versum Feria Tertia]
+V. Légy az én segítőm, ne hagyj el engem!
+R. Meg ne vess engem, én üdvözítő Istenem!
+
+[Feria Sexta]
+@:Dominica Sexta
+
+[Responsory breve Feria Sexta]
+R.br. Áldom én az Urat, * minden időben.
+R. Áldom én az Urat, * minden időben.
+V. Az ő dicsérete mindenkor ajkamon.
+R. Minden időben.
+&Gloria
+R. Áldom én az Urat, * minden időben.
+
+[Versum Feria Sexta]
+@:Versum Dominica Sexta
+
+[Feria Nona]
+@:Dominica Nona
+
+[Responsory breve Feria Nona]
+R.br. Válts meg engem, Uram, * s könyörülj rajtam!
+R. Válts meg engem, Uram, * s könyörülj rajtam!
+V. Az én lábam az igaz úton áll, a gyülekezetekben áldalak téged, Uram.
+R. Könyörülj rajtam!
+&Gloria
+R. Válts meg engem, Uram, * s könyörülj rajtam!
+
+[Versum Feria Nona]
+@:Versum Dominica Nona
+
+[Oratio Feria Prima]
+@:Oratio Dominica Prima
+
+[Oratio Feria Tertia]
+@:Oratio Dominica Tertia
+
+[Oratio Feria Sexta]
+@:Oratio Dominica Sexta
+
+[Oratio Feria Nona]
+@:Oratio Dominica Nona
+
+[Hymnus Day1 Laudes]
+v. Ki Atyád fénylő tükre vagy,
+ki fényét fénnyel hirdeted,
+fénytől való fény, fényt adó,
+nappalt ékítő napvilág,
+_
+Igaz napunk: jöjj, tündökölj,
+ragyogj fel, örök fénysugár,
+áraszd ki ránk Szentlelkedet,
+gyújtsd meg szívünket lángolón!
+_
+Jótetthez adjon jó erőt,
+törje le ártónk vad fogát,
+bajokban is legyen velünk,
+adjon erőt, ha szenvedünk!
+_
+Imánk szólítja az Atyát,
+örök dicsőség Szent Urát,
+aki malasztot bőven ád,
+hogy rontsa szét a bűnhomályt.
+_
+Vezesse lelkünk szüntelen,
+testünk is tiszta s hű legyen,
+hitünk lobogjon lelkesen,
+ne rontsa bűnnek mérge sem!
+_
+Krisztus legyen mi ételünk,
+töltsön be hit, ha szomjazunk,
+élvezzük együtt boldogan
+a Lélek józan mámorát!
+_
+A hajnal hozza nappalunk,
+hajnalban teljes már napunk,
+mint Atyjában ragyog Fia,
+s Igében teljes az Atya!
+_
+Napunk vidáman teljen el,
+becsületünk a virradat,
+hitünk legyen a déli nap,
+s lelkünk ne tudjon esthomályt!
+_
+Dicsérjük Istent, az Atyát,
+és Egyszülöttjét, Szent Fiát,
+és Lelkét, a Vigasztalót
+most és örökké szüntelen!
+Ámen.
+
+[Hymnus Day1 Vespera]
+v. Te, mérhetetlen Alkotó,
+ki vizek útját megszabod,
+s nehogy egymásra rontsanak,
+eget határul rendeled,
+_
+Égi vizeknek s földinek
+szilárd helyet adsz, partokat,
+hogy víz hűsítse a tüzet
+s földet ne érje pusztulás,
+_
+Hitünk ragyogjon tiszta fényt,
+hozza világló csillagát,
+minden hívságot űzzön el,
+ne ártson csalfa délibáb!
+_
+Kegyes Urunk: add meg nekünk
+örök malasztod, öntsd belénk,
+új csellel meg ne rontsa már
+szívünket régi tévedés!
+_
+Add meg minékünk, jó Atya,
+s Atyának mása, egy Fia
+s Szentlélek Isten, vigaszunk,
+örök időknek szent Ura!
+Ámen.
+
+[Hymnus Day2 Laudes]
+v. A napnak szárnyas hírnöke
+fény érkezését hirdeti,
+minket meg új életre hív
+lélekserkentő Krisztusunk.
+_
+Vigyétek, szól, az ágyakat,
+léhaság beteg álmait;
+tisztán, igazként, józanul
+várjatok, már közel vagyok!
+_
+Jézust szólítsa énekünk,
+sírva, könyörgőn, józanul,
+imádságunk, ha rá figyel,
+nem szunnyad el a tiszta szív.
+_
+Álmunkat űzd el, Krisztusunk,
+rontsd szét az éjnek láncait,
+bocsásd meg régi bűneink,
+s új fényességet adj nekünk!
+_
+Dicsérjük Istent, az Atyát,
+és Egyszülöttjét, Szent Fiát,
+és Lelkét, a Vigasztalót
+most és örökké szüntelen!
+Ámen.
+
+[Hymnus Day2 Vespera]
+v. Földet teremtő Istenünk,
+világ alapját rendező,
+ki szilaj víznek áramát
+fékezvén, földet adsz köré,
+_
+A föld hogy hozzon magvakat,
+virág díszítse ékesen,
+s gyümölcsöt termő ágai
+tápláljanak sok éhezőt:
+_
+Parancsod mindig szent legyen,
+a rossz ne rontsa meg szivünk,
+a jót tegyük meg boldogan,
+s ne ártson soha a halál!
+_
+A lélek üszkös sebeit
+tisztítsa malaszt harmata,
+s könnyek lemosva bűnöket,
+múljon a vétkes szenvedély!
+_
+Add meg minékünk, jó Atya,
+s Atyának mása, egy Fia
+s Szentlélek Isten, vigaszunk,
+örök időknek szent Ura!
+Ámen.
+
+[Hymnus Day3 Laudes]
+v. Ti, éj, sötétség, fellegek,
+s kavargó földi zűrzavar,
+dereng az ég, már jő a fény,
+Krisztus közelg, hát tűnjetek!
+_
+A föld homálya átszakad,
+a fény dárdája áttöri,
+a dolgok színe visszatér,
+a fénylő nap ha rátekint.
+_
+Bennünk lapul sok csalfaság,
+de fényed mind elűzheti,
+ragyogj fel, égi szent Napunk,
+derűs arcoddal nézz le ránk!
+_
+Csak téged néz, ó, Krisztusunk,
+a szelíd s tiszta értelem,
+előtted sír és énekel,
+hogy szívünkben te légy jelen.
+_
+Dicsérjük Istent, az Atyát,
+és Egyszülöttjét, Szent Fiát,
+és Lelkét, a Vigasztalót
+most és örökké szüntelen!
+Ámen.
+
+[Hymnus Day3 Vespera]
+v. Mennynek hatalmas, szent Ura,
+ki a magasság boltívét
+sugárzó tűzzel díszíted,
+növelve égbolt fényeit:
+_
+Ím, negyedszer hogy jő a nap,
+fent lángol már a napkorong,
+és rendben járják útjukat
+a hold s a bolygó csillagok,
+_
+Űzd el szívbéli éjszakánk,
+töröld le lelkünk mocskait,
+oldozd a vétkek láncait,
+vedd el malomkősúlyait!
+_
+Hogy éjszaka és napvilág
+határát törvény szabja meg,
+s a hónapoknak indulást,
+jelekkel adjon kezdetet.
+_
+Add meg minékünk, jó Atya,
+s Atyának mása, egy Fia
+s Szentlélek Isten, vigaszunk,
+örök időknek szent Ura!
+Ámen.
+
+[Hymnus Day4 Laudes]
+v. Fölkelt immár a drága fény,
+űzi a sápadt éjhomályt,
+mely minket annyi bajba vitt,
+terelve téves utakon.
+_
+Hozzon derűt a fény nekünk,
+és tisztítson meg minket is,
+ne szóljunk soha álnokul,
+s kerüljünk minden vakveszélyt!
+_
+Tudjuk, az Őrző ránk figyel,
+fentről mindennap gondja van
+reánk, és látja, mit teszünk
+kora hajnaltól estelig.
+_
+Egész napunk úgy múljon el,
+ne csaljon meg se nyelv, se kéz,
+ne vétkezzék a léha szem,
+s ne érje testünk bűnmocsok!
+_
+Dicsérjük Istent, az Atyát,
+és Egyszülöttjét, Szent Fiát,
+és Lelkét, a Vigasztalót
+most és örökké szüntelen!
+Ámen.
+
+[Hymnus Day4 Vespera]
+v. Nagy Úr, hatalmas Istenünk,
+ki mind a vízből származót
+vagy hullámokba rendeled,
+vagy levegőbe röpteted,
+_
+Egyiket vizek mélyibe,
+másikat magas égbe fel,
+s ami egy törzsből sarjadott,
+betölti saját lakhelyét:
+_
+Ne nyomja őket bűnteher,
+s ne büszkeség emelje föl,
+nehogy a kába gőg után
+letörve mélybe hulljanak!
+_
+Te szolgáidhoz légy kegyes,
+kiket véreddel tisztitasz,
+bűnökben el ne bukjanak,
+s szörnyű halált ne érjenek!
+_
+Add meg minékünk, jó Atya,
+s Atyának mása, egy Fia
+s Szentlélek Isten, vigaszunk,
+örök időknek szent Ura!
+Ámen.
+
+[Hymnus Day5 Laudes]
+v. Dicsőségedben trónoló,
+halandó ember kit remél,
+Mindenhatónak egy Fia,
+s a tiszta Szűznek gyermeke:
+_
+Az ébredőnek nyújtsd kezed,
+ébredjen benne józan ész,
+szárnyalva zengje énekét,
+illő hálát s dicséretét!
+_
+Verjen bensőnkben gyökeret
+a hit, melyet áhít a szív,
+vigadjon véle a remény
+s, mi legnagyobb: a szeretet!
+_
+A hajnalcsillag fenn ragyog,
+a fénynek jöttét hirdeti,
+az éj homálya eltünik,
+a szentség fénye tündököl.
+_
+Dicsérjük Istent, az Atyát,
+és Egyszülöttjét, Szent Fiát,
+és Lelkét, a Vigasztalót
+most és örökké szüntelen!
+_
+E fény, ha bennünk megmarad,
+világ sötétjét szétveri,
+megőriz minket bűntelen,
+földi időnk míg véget ér.
+Ámen.
+
+[Hymnus Day5 Vespera]
+v. Embert teremtő Istenünk,
+kitől minden rend származik:
+parancsodra a föld pora
+hüllőt terem, s vad állatot.
+_
+A sok, nagytestű létezőt
+parancsod hívta létre mind,
+hogy szolgálják szavad szerint
+az emberfajt, a föld urát.
+_
+Öröm jutalmát add nekik
+s malasztodat, mely ingyenes,
+hogy híveid ne vad viszály,
+hanem a béke kösse meg!
+_
+Űzd szolgáidtól messzire
+a tisztátlan, vak szenvedélyt,
+erkölcsüket mely rontaná
+és rosszra vinné tettüket!
+_
+Add meg minékünk, jó Atya,
+s Atyának mása, egy Fia
+s Szentlélek Isten, vigaszunk,
+örök időknek szent Ura!
+Ámen.
+
+[Hymnus Day6 Laudes]
+v. Hajnalt jelez a napkelet,
+a földre új nap érkezik,
+dárdáit szórja már a fény,
+s a káosz lassan távozik.
+_
+A rémlátás is eltünik,
+szűnik a szörnyű félelem,
+mit bűnök éje ránk hozott,
+a kísértés most elcsitul.
+_
+Dicsérjük Istent, az Atyát,
+és Egyszülöttjét, Szent Fiát,
+és Lelkét, a Vigasztalót
+most és örökké szüntelen!
+_
+Ha jő a végső virradat,
+mit esdekelve vár szivünk,
+borítsa fényár, napvilág,
+s vígan szólhasson énekünk!
+Ámen.
+
+[Hymnus Day6 Vespera]
+v. Isten, te, mindent Alkotó,
+egek vezére aki vagy,
+s fénnyel ruházod a napot,
+álommalaszttal a vak éjt,
+_
+Hogy oldott tagjainkat így
+munkára eddze a szünet,
+fáradt velőnket és borús
+aggályainkat oldja fel:
+_
+Aludni lelkünket ne hagyd,
+aludjanak ki vétkeink,
+s a hit hűsítse győztesen
+az éjnek forró álmait!
+_
+Hálát a végzett nap miatt,
+s imát mondunk az éj elé,
+mit fogadtunk, ha megsegítsz,
+most teljesíti himnuszunk.
+_
+Levetve síkos gondokat
+rólad álmodjon mély szivünk,
+s föl ne riasszon irigyen
+Sátán csele, a rémület!
+_
+Te légy, kit szívünk mélye áld,
+és hangunk zengve harsonáz,
+kit szomjaz minden tiszta vágy,
+s imád a józan értelem,
+_
+Kérjük a Fiút és Atyát,
+s a kettejüktől Származót:
+örök, hatalmas Három-Egy,
+vedd szárnyad alá, aki kér!
+_
+Hogy ha az éjszakák köde
+homályba csukja a napot,
+a hit ne tudjon ily homályt,
+hit világítsa át az éjt!
+Ámen.
+
+[Hymnus Day6 Vespera] (tempore post Pentecosten)
+v. Ó, mi Szent Atyánk, irgalmas és kegyes,
+Isten szent Fia, Urunk, Jézus Krisztus,
+ó, Vigasztaló, éltető Szentlélek:
+egy örök Isten, Ámen.
+_
+Ó, Szentháromság, nagy és erős Egység,
+igaz istenség, mérhetetlen jóság,
+angyalok fénye, árva népnek vigasz:
+világ reménye!
+_
+Amit alkottál, mind tenéked szolgál,
+sok teremtményed megdicsőít téged,
+mi is tenéked dicséretet zengünk:
+hallgasd meg, kérünk!
+_
+Dicsőség néked, mindenható Isten,
+három személyben egylényegű Fölség,
+tisztelet, áldás, himnusz illet téged
+most és örökké. Ámen.
