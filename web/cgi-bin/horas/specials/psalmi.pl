@@ -347,7 +347,8 @@ sub psalmi_major {
   );
 
   if ($version =~ /Strigoniense/ && strig_major_applicable($lang)) {
-    return strig_psalmi_major($lang);
+    my $strig = strig_psalmi_major($lang);
+    return $strig if $strig;
   }
 
   if ($version =~ /monastic/i && $hora eq 'Laudes' && $rule !~ /matutinum romanum/i) { $psalmnum1 = $psalmnum2 = -1; }

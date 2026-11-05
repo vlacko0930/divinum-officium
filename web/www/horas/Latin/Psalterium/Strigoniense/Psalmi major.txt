@@ -17,3 +17,41 @@ Fidélia ómnia mandáta * eius, confirmáta in sǽculum sǽculi.;;110
 In mandátis * eius volet nimis.;;111
 Sit nomen Dómini * benedíctum in sǽcula.;;112
 Nos, qui vívimus, * benedícimus Dóminum.;;113
+
+# The ferial psalm sets agree with the Tridentine psalter, so they are
+# included here rather than copied.
+[Feria2 Laudes]
+@Psalterium/Psalmi/Psalmi major:Daya1 Laudes
+
+[Feria2 Vespera]
+@Psalterium/Psalmi/Psalmi major:Daya1 Vespera
+
+[Feria3 Laudes]
+@Psalterium/Psalmi/Psalmi major:Daya2 Laudes
+
+[Feria3 Vespera]
+@Psalterium/Psalmi/Psalmi major:Daya2 Vespera
+
+[Feria4 Laudes]
+@Psalterium/Psalmi/Psalmi major:Daya3 Laudes
+
+[Feria4 Vespera]
+@Psalterium/Psalmi/Psalmi major:Daya3 Vespera
+
+[Feria5 Laudes]
+@Psalterium/Psalmi/Psalmi major:Daya4 Laudes
+
+[Feria5 Vespera]
+@Psalterium/Psalmi/Psalmi major:Daya4 Vespera
+
+[Feria6 Laudes]
+@Psalterium/Psalmi/Psalmi major:Daya5 Laudes
+
+[Feria6 Vespera]
+@Psalterium/Psalmi/Psalmi major:Daya5 Vespera
+
+[Sabbato Laudes]
+@Psalterium/Psalmi/Psalmi major:Daya6 Laudes
+
+[Sabbato Vespera]
+@Psalterium/Psalmi/Psalmi major:Daya6 Vespera
