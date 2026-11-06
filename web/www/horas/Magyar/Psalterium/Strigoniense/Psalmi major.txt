@@ -19,85 +19,85 @@ Legyen áldott az Úr neve * mindörökké!;;112
 Mi, akik élünk, * áldjuk az Urat mindörökké.;;113
 
 [Feria2 Laudes]
-Könyörülj rajtam, Isten!;;50
-Halljad meg, Uram, az én kiáltásomat!;;5
-Isten, én Istenem, tehozzád ébredek virradatkor.;;62;66
-Megfordult a te haragod, s megvigasztaltál engem.;;221
-Magasságban lakók, dicsérjétek az Istent!;;148;149;150
+Könyörülj rajtam, * Isten!;;50
+Halljad meg, Uram, * az én kiáltásomat!;;5
+Isten, én Istenem, * tehozzád ébredek virradatkor.;;62;66
+Megfordult a te haragod, * s megvigasztaltál engem.;;221
+Magasságban lakók, * dicsérjétek az Istent!;;148;149;150
 
 [Feria2 Vespera]
-Meghallja az Úr imádságom szavát.;;114
-Hittem én, s ki is mondottam.;;115
-Dicsérjétek az Urat, ti, minden népek!;;116
-Kiáltottam, és meghallgatott engem.;;119
-Az Úrtól a mi segítségünk.;;120
+Meghallja az Úr * imádságom szavát.;;114
+Hittem én, * s ki is mondottam.;;115
+Dicsérjétek az Urat, * ti, minden népek!;;116
+Kiáltottam, * és meghallgatott engem.;;119
+Az Úrtól * a mi segítségünk.;;120
 
 [Feria3 Laudes]
-Könyörületednek sokasága szerint, Uram, könyörülj rajtam!;;50
-Én orcám üdvössége, én Istenem.;;42
-Isten, én Istenem, tehozzád ébredek virradatkor.;;62;66
-Életünknek minden napján ments meg minket, Urunk!;;222
-Minden angyalai, dicsérjétek az Urat a mennyben!;;148;149;150
+Könyörületednek * sokasága szerint, Uram, könyörülj rajtam!;;50
+Én orcám * üdvössége, én Istenem.;;42
+Isten, én Istenem, * tehozzád ébredek virradatkor.;;62;66
+Életünknek * minden napján ments meg minket, Urunk!;;222
+Minden angyalai, * dicsérjétek az Urat a mennyben!;;148;149;150
 
 [Feria3 Vespera]
-Az Úrnak házába vigadozva megyünk.;;121
-Ki a mennyekben lakozol, könyörülj rajtam!;;122
-A mi segítségünk az Úr nevében.;;123
-Tégy jót, Uram, a jókkal, az egyenes szívűekkel!;;124
-Akik könnyhullatással vetnek, örvendezéssel aratnak.;;125
+Az Úrnak házába * vigadozva megyünk.;;121
+Ki a mennyekben lakozol, * könyörülj rajtam!;;122
+A mi segítségünk * az Úr nevében.;;123
+Tégy jót, Uram, a jókkal, * az egyenes szívűekkel!;;124
+Akik könnyhullatással vetnek, * örvendezéssel aratnak.;;125
 
 [Feria4 Laudes]
-Moss meg engem, Uram, teljességgel, tisztíts meg bűneimtől!;;50
-Téged illet, Isten, a dicséret Sionban!;;64
-Ajkaim dicsérjenek téged, én Istenem, teljes életemben!;;62;66
-Örvendezik az én szívem az Úrban.;;223
-Ti, egek egei, dicsérjétek az Istent!;;148;149;150
+Moss meg engem, Uram, * teljességgel, tisztíts meg bűneimtől!;;50
+Téged illet, Isten, * a dicséret Sionban!;;64
+Ajkaim * dicsérjenek téged, én Istenem, teljes életemben!;;62;66
+Örvendezik * az én szívem az Úrban.;;223
+Ti, egek egei, * dicsérjétek az Istent!;;148;149;150
 
 [Feria4 Vespera]
-Ha te meg nem tartasz, Uram, Isten, hiába vigyáznak a mi szemeink.;;126
-Boldogok mindazok, kik az Urat félik.;;127
-Áldást mondunk rátok az Úr nevében.;;128
-A mélységekből kiáltok hozzád, ó, Uram.;;129
-Bízzék Izráel az Úrban!;;130
+Ha te meg nem tartasz, * Uram, Isten, hiába vigyáznak a mi szemeink.;;126
+Boldogok mindazok, * kik az Urat félik.;;127
+Áldást mondunk rátok * az Úr nevében.;;128
+A mélységekből * kiáltok hozzád, ó, Uram.;;129
+Bízzék * Izráel az Úrban!;;130
 
 [Feria5 Laudes]
-Ellened, csak ellened vétkeztem, könyörülj rajtam, Uram!;;50
-Uram, te lettél a mi menedékünk.;;89
-Már kora reggel, Uram, rólad gondolkodom.;;62;66
-Énekeljünk az Úrnak dicsőséges éneket!;;224
-Az ő szent hajlékában dicsérjétek az Istent!;;148;149;150
+Ellened, * csak ellened vétkeztem, könyörülj rajtam, Uram!;;50
+Uram, te lettél * a mi menedékünk.;;89
+Már kora reggel, * Uram, rólad gondolkodom.;;62;66
+Énekeljünk az Úrnak * dicsőséges éneket!;;224
+Az ő szent hajlékában * dicsérjétek az Istent!;;148;149;150
 
 [Feria5 Vespera]
-Emlékezz meg a te fölkentedről!;;131
-Íme, mily jó testvérként együtt lakni!;;132
-Mindent, mit akart az Úr, megcselekedett.;;134
-Örökkévaló irgalmassága az Úrnak.;;135
-Énekeljetek himnuszt Sion dalaiból nekünk!;;136
+Emlékezz meg * a te fölkentedről!;;131
+Íme, mily jó * testvérként együtt lakni!;;132
+Mindent, * mit akart az Úr, megcselekedett.;;134
+Örökkévaló * irgalmassága az Úrnak.;;135
+Énekeljetek himnuszt * Sion dalaiból nekünk!;;136
 
 [Feria6 Laudes]
-Az erősség lelkével szilárdítsd meg az én szívemet, Uram!;;50
-Hűséged szerint hallgass meg engem, Uram!;;142
-Világosítsd reánk a te orcádat, Urunk!;;62;66
-Uram, hallottam a te szavadat és féltem.;;225
-Dobbal és éneklő karban, húrokkal és orgonával dicsérjétek az Istent!;;148;149;150
+Az erősség lelkével * szilárdítsd meg az én szívemet, Uram!;;50
+Hűséged szerint * hallgass meg engem, Uram!;;142
+Világosítsd reánk * a te orcádat, Urunk!;;62;66
+Uram, hallottam * a te szavadat és féltem.;;225
+Dobbal és éneklő karban, * húrokkal és orgonával dicsérjétek az Istent!;;148;149;150
 
 [Feria6 Vespera]
-Angyaloknak színe előtt zsoltározom néked, Uram.;;137
-Uram, te megvizsgáltál, és ismersz engem.;;138
-A gonosz embertől ments meg engem, Istenem!;;139
-Tehozzád kiáltok, Uram, siess hozzám!;;140
-Osztályrészem te légy, Uram, az élőknek földjén!;;141
+Angyaloknak színe előtt * zsoltározom néked, Uram.;;137
+Uram, * te megvizsgáltál, és ismersz engem.;;138
+A gonosz embertől * ments meg engem, Istenem!;;139
+Tehozzád kiáltok, Uram, * siess hozzám!;;140
+Osztályrészem te légy, Uram, * az élőknek földjén!;;141
 
 [Sabbato Laudes]
-Jóakaratod szerint cselekedj velünk, Urunk!;;50
-Jó dolog az Urat dicsérni.;;91
-Féljék az Urat a földnek minden népei!;;62;66
-Szolgáin megkönyörül az Úr Isten.;;226
-Szép hangú cimbalmokkal dicsérjétek az Istent!;;148;149;150
+Jóakaratod szerint * cselekedj velünk, Urunk!;;50
+Jó dolog * az Urat dicsérni.;;91
+Féljék az Urat * a földnek minden népei!;;62;66
+Szolgáin * megkönyörül az Úr Isten.;;226
+Szép hangú cimbalmokkal * dicsérjétek az Istent!;;148;149;150
 
 [Sabbato Vespera]
-Áldott az Úr, az én kősziklám s erősségem!;;143
-Magasztallak örökkön örökké.;;144
-Dicsérem az Istent én életemmel.;;145
-Istenünknek ékes dicsérete légyen!;;146
-Az Úr adott áldást fiaidnak.;;147
+Áldott az Úr, * az én kősziklám s erősségem!;;143
+Magasztallak * örökkön örökké.;;144
+Dicsérem az Istent * én életemmel.;;145
+Istenünknek * ékes dicsérete légyen!;;146
+Az Úr adott * áldást fiaidnak.;;147
