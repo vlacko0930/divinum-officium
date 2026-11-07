@@ -35,7 +35,15 @@ sub specials {
   }
 
   my $i = $hora eq 'Laudes' ? ' 2' : $hora eq 'Vespera' ? " $vespera" : '';
-  if (!$special && exists($w{"Special $hora$i"})) { return loadspecial($w{"Special $hora$i"}); }
+
+  # The Strigoniense day hours are built from the ordinary and psalter; an
+  # inherited Tridentine Special script would bring in proper texts.
+  if (!$special
+    && $version !~ /Strigoniense/
+    && exists($w{"Special $hora$i"}))
+  {
+    return loadspecial($w{"Special $hora$i"});
+  }
 
   our @s = ();
   my @t = @$s;
@@ -139,7 +147,8 @@ sub specials {
 
     # Prelude pseudo-item. Include it if it exists; otherwise drop it entirely.
     if ($item =~ /Prelude/) {
-      push(@s, $w{"Prelude $hora"}) if exists($w{"Prelude $hora"});
+      push(@s, $w{"Prelude $hora"})
+        if $version !~ /Strigoniense/ && exists($w{"Prelude $hora"});
       next;
     }
 
@@ -313,6 +322,8 @@ sub specials {
     }
 
     if ($item =~ /Martyrologium/) {
+      # The Strigoniense martyrology has not been restored yet.
+      if ($version =~ /Strigoniense/) { next; }
       setcomment($label, 'Martyrologium', 0, $lang);
       push(@s, martyrologium($lang));
       push(@s, '', '$Pretiosa') unless $rule =~ /ex C9/;
@@ -336,7 +347,7 @@ sub specials {
       } else {
         push(@s, '#' . translate('Antiphona finalis BMV', $lang));
 
-        if ($version =~ /cist/i) {
+        if ($version =~ /Strigoniense/ || $version =~ /cist/i) {
           push(@s, '$ant Salve Regina');
         } elsif ($dayname[0] =~ /Adv|Nat/i
           || $month == 1
@@ -598,30 +609,41 @@ sub getantvers {
   my $w = '';
   my $c = 0;
 
-  ($w, $c) = getproprium("$item $ind", $lang, 1);
+  if ($version =~ /Strigoniense/
+    && $ind > 0
+    && $item =~ /^(?:Versum|Ant)$/
+    && $hora =~ /^(?:Laudes|Vespera)$/)
+  {
+    # Only the Strigoniense ordinary and psalter may supply these texts.
+    $w = strig_canticle_ant($lang) if $item eq 'Ant';
+    $w ||= getfrompsalterium($item, $ind, $lang);
+    setbuild2("$item $ind ex Strigoniense");
+  } else {
+    ($w, $c) = getproprium("$item $ind", $lang, 1);
 
-  if (!$w && $ind > 1) {
-    my $i = 4 - $ind;
-    ($w, $c) = getproprium("$item $i", $lang, 1);
-  }
-
-  #if (!$w && $ind != 2) {($w, $c) = getproprium("$item 2", $lang, 1);}
-  #if (!$w && $ind == 2) {($w, $c) = getproprium("$item 3", $lang, 1);}
-  #if (!$w && $ind == 2) {($w, $c) = getproprium("$item 1", $lang, 1);}
-  #handle seant
-  if (!$w && $hora eq 'Vespera' && $item =~ /Ant/i && $winner =~ /Tempora\/Quadp[12]/i) {
-    $w = getseant($lang);
-
-    if ($w) {
-      setbuild2("$item $ind ex praevio omitto");
-      $c = 0;
+    if (!$w && $ind > 1) {
+      my $i = 4 - $ind;
+      ($w, $c) = getproprium("$item $i", $lang, 1);
     }
-  }
 
-  if (!$w) {
-    $w = getfrompsalterium($item, $ind, $lang);
-    $c = 0;
-    setbuild2("$item $ind ex Psalterio");
+    #if (!$w && $ind != 2) {($w, $c) = getproprium("$item 2", $lang, 1);}
+    #if (!$w && $ind == 2) {($w, $c) = getproprium("$item 3", $lang, 1);}
+    #if (!$w && $ind == 2) {($w, $c) = getproprium("$item 1", $lang, 1);}
+    #handle seant
+    if (!$w && $hora eq 'Vespera' && $item =~ /Ant/i && $winner =~ /Tempora\/Quadp[12]/i) {
+      $w = getseant($lang);
+
+      if ($w) {
+        setbuild2("$item $ind ex praevio omitto");
+        $c = 0;
+      }
+    }
+
+    if (!$w) {
+      $w = getfrompsalterium($item, $ind, $lang);
+      $c = 0;
+      setbuild2("$item $ind ex Psalterio");
+    }
   }
 
   if ($w) {

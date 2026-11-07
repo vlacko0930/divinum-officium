@@ -16,7 +16,7 @@ sub lectio_brevis_prima {
   setbuild('Psalterium/Special/Prima Special', $name, 'Lectio brevis ord');
 
   #look for [Lectio Prima]
-  if ($version !~ /1955|196|cist/i) {
+  if ($version !~ /1955|196|cist|Strigoniense/i) {
     my $b;
 
     if (exists($winner{'Lectio Prima'})) {
@@ -61,15 +61,20 @@ sub capitulum_prima {
 
   my %brevis = %{setupstring($lang, 'Psalterium/Special/Prima Special.txt')};
 
-  my $key =
-    (    $dayofweek > 0
-      && $version !~ /196[03]/
-      && $winner{Rank} =~ /Feria|Vigilia/i
-      && $winner{Rank} !~ /Vigilia Epi/i
-      && !($winner{Rank} =~ /in.*Oct/i && $version =~ /Cist/i)
-      && (!$commune || $commune !~ /C10/)
-      && ($rank < 3 || $dayname[0] =~ /Quad6/ || $winner =~ /Quadp3-3/)
-      && $dayname[0] !~ /Pasc/i) ? 'Feria' : 'Dominica';
+  my $key;
+  if ($version =~ /Strigoniense/) {
+    $key = $dayofweek == 0 ? 'Dominica' : 'Feria';
+  } else {
+    $key =
+      (    $dayofweek > 0
+        && $version !~ /196[03]/
+        && $winner{Rank} =~ /Feria|Vigilia/i
+        && $winner{Rank} !~ /Vigilia Epi/i
+        && !($winner{Rank} =~ /in.*Oct/i && $version =~ /Cist/i)
+        && (!$commune || $commune !~ /C10/)
+        && ($rank < 3 || $dayname[0] =~ /Quad6/ || $winner =~ /Quadp3-3/)
+        && $dayname[0] !~ /Pasc/i) ? 'Feria' : 'Dominica';
+  }
 
   my $capit = $brevis{$key} . "\n\$Deo gratias\n_\n";
   my $strig = strig_special("Capitulum $key Prima", $lang);
@@ -82,7 +87,7 @@ sub capitulum_prima {
   if ($version =~ /1963/) {
     $capit = "$label\n" . $capit;
   } else {
-    setcomment($label, 'Source', $key eq 'Feria', $lang);
+    setcomment($label, 'Source', $version =~ /Strigoniense/ ? 0 : $key eq 'Feria', $lang);
   }
 
   my @resp;
@@ -91,7 +96,9 @@ sub capitulum_prima {
     @resp = split("\n", $brevis{'Responsory'});
     my $primaresponsory = get_prima_responsory($lang);
     my %wpr = columnsel($lang) ? %winner : %winner2;
-    if (exists($wpr{'Versum Prima'})) { $primaresponsory = $wpr{'Versum Prima'}; }
+    if ($version !~ /Strigoniense/ && exists($wpr{'Versum Prima'})) {
+      $primaresponsory = $wpr{'Versum Prima'};
+    }
 
     if ($primaresponsory) {
       if ($lang =~ /gabc/i) {
@@ -114,6 +121,9 @@ sub get_prima_responsory {
   my $lang = shift;
 
   our ($version, $month, $day, %commemoratio, $rule);
+
+  # The Strigoniense Prime uses its ordinary responsory from Prima Special.
+  return '' if $version =~ /Strigoniense/;
 
   my $key = gettempora('Prima responsory');
 

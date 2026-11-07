@@ -7,20 +7,34 @@ sub capitulum_major {
 
   our ($winner, $vespera, $version, $hora, $label);
 
-  my $name = 'Capitulum Laudes';    # same for Vespera
-                                    # special cases
-  $name = 'Capitulum Vespera 1' if $winner =~ /12-25/ && $vespera == 1;
-  $name = 'Capitulum Vespera' if $winner =~ /C12/ && $hora eq 'Vespera';
+  my ($capit, $c, $name);
 
-  setbuild('Psalterium/Special/Major Special', $name, 'Capitulum ord');
-
-  my ($capit, $c) = getproprium($name, $lang, 1);
-
-  if (!$capit) {
-    my %capit = %{setupstring($lang, 'Psalterium/Special/Major Special.txt')};
-    strig_merge_special(\%capit, $lang, '^(?:Dominica|Feria|Capitulum)');
+  if ($version =~ /Strigoniense/) {
     $name = gettempora('Capitulum major') . " $hora";
-    $capit = $capit{$name};
+    $capit = strig_special($name, $lang);
+    $c = 0;
+    setbuild('Psalterium/Strigoniense/Special', $name, 'Capitulum ord');
+
+    unless ($capit) {
+      my %ordinary = %{setupstring($lang, 'Psalterium/Special/Major Special.txt')};
+      $capit = $ordinary{$name};
+    }
+  } else {
+    $name = 'Capitulum Laudes';    # same for Vespera
+                                  # special cases
+    $name = 'Capitulum Vespera 1' if $winner =~ /12-25/ && $vespera == 1;
+    $name = 'Capitulum Vespera' if $winner =~ /C12/ && $hora eq 'Vespera';
+
+    setbuild('Psalterium/Special/Major Special', $name, 'Capitulum ord');
+
+    ($capit, $c) = getproprium($name, $lang, 1);
+
+    if (!$capit) {
+      my %capit = %{setupstring($lang, 'Psalterium/Special/Major Special.txt')};
+      strig_merge_special(\%capit, $lang, '^(?:Dominica|Feria|Capitulum)');
+      $name = gettempora('Capitulum major') . " $hora";
+      $capit = $capit{$name};
+    }
   }
 
   # GABC: Capitula are input in database acc. to Ant. Romanum
@@ -187,6 +201,9 @@ sub minor_reponsory {
   if ($hora eq 'Completorium' && $version !~ /^Ordo Praedicatorum/) {
     $resp .= "\n_\n" if ($resp);
     $resp .= $capit{'Versum 4'};
+  } elsif ($version =~ /Strigoniense/) {
+    # The Strigoniense ordinary already supplied the responsory and versicle.
+    setbuild('Psalterium/Strigoniense/Special', $name, 'Capitulum ord');
   } else {
     setbuild('Psalterium/Special/Minor Special', $name, 'Capitulum ord');
 
@@ -241,14 +258,25 @@ sub capitulum_minor {
   my $capit = $capit{$name} =~ s/\s*$//r;
 
   my $comment = $name =~ /Dominica|Feria/ ? 5 : 1;
-  setbuild('Psalterium/Special/Minor Special', $name, 'Capitulum ord');
+  setbuild(
+    $version =~ /Strigoniense/
+    ? 'Psalterium/Strigoniense/Special'
+    : 'Psalterium/Special/Minor Special',
+    $name,
+    'Capitulum ord',
+  );
 
-  #look for special from prorium the tempore or sancti
-  # use Laudes for Tertia apart C12
-  $name = "Capitulum $hora";
-  $name =~ s/Tertia/Laudes/ if ($hora eq 'Tertia' && $votive !~ /C12/);
-  my ($w, $c) = getproprium($name, $lang, 1);
-  $capit = $w || $capit;
+  my ($w, $c);
+
+  # The Strigoniense proper is not yet present: use only its ordinary.
+  unless ($version =~ /Strigoniense/) {
+    #look for special from prorium the tempore or sancti
+    # use Laudes for Tertia apart C12
+    $name = "Capitulum $hora";
+    $name =~ s/Tertia/Laudes/ if ($hora eq 'Tertia' && $votive !~ /C12/);
+    ($w, $c) = getproprium($name, $lang, 1);
+    $capit = $w || $capit;
+  }
 
   if ($hora ne 'Completorium') {
     setcomment($label, 'Source', $w ? $c : $comment, $lang);

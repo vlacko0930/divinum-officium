@@ -199,6 +199,9 @@ $Deo gratias
 v. Te, Uram, közöttünk vagy, mi a te nevedet viseljük, ne hagyj hát el minket, Urunk, Istenünk!
 $Deo gratias
 
+[Ant 4]
+Védj meg minket, * Uram, amikor virrasztunk, őrizz minket, amikor alszunk, hogy Krisztusban virrasszunk és békességben nyugodjunk.
+
 [Responsory breve Dominica Tertia]
 R.br. Hajtsd az én szívemet, Isten, * a te bizonyságaidhoz!
 R. Hajtsd az én szívemet, Isten, * a te bizonyságaidhoz!
@@ -254,10 +257,6 @@ $Qui vivis
 [Oratio Completorium]
 Isten, ki világosságot árasztasz az éjszakára is, és annak sötétsége után ismét fényt derítesz: engedd azt nekünk jóságoddal, hogy a most következő éjszakán a Sátánnak minden cselvetése nélkül menjünk át, s mire a reggel felvirrad, szent szolgálatodra újból serényen megjelenve, neked, élő és igaz Istennek hálát és dicséretet mondhassunk! Világ Üdvözítője, üdvözíts minket, mindenható Isten, s engedd nekünk az örökké tartó fényességet, add a te békédet napjainknak, a hirtelen és készületlen haláltól pedig kegyesen ments meg minket! Aki az Atyaistennel és a Szentlélekkel élsz és uralkodol, Isten, mindörökkön örökké.
 $Amen
-
-# Hétköznapi nappali zsolozsma.  A zsoltárelosztás és a zsoltárantifónák a
-# hétköznapi zsoltároskönyvből valók; az alábbiak a Strigoniense tulajdon
-# szövegei.
 
 [Feria Laudes]
 !1Kor 16:13-14
@@ -367,10 +366,6 @@ $Per Dominum
 [Oratio Sabbato Vespera]
 Ne tekintsd, Isten, álnokságainkat, hanem váljék javunkra, jóllehet méltatlanoknak, egyedül a te irgalmad!
 $Per Dominum
-
-# Hétköznapi kisórák.  A zsoltárok, antifónák és könyörgések megegyeznek a
-# hétköznapi zsolozsmával; a kapitulumokat és rövid responzóriumokat innen
-# vesszük, hogy mindkét nyelven a Strigoniense szövege szólaljon meg.
 
 [Capitulum Feria Prima]
 !Joel 2:32

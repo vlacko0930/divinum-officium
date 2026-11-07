@@ -20,6 +20,11 @@ sub psalmi {
     } else {
       $psalmi = psalmi_minor($lang);
     }
+
+    # In the Strigoniense office the antiphon before a psalm is always the
+    # short form and the one after it is the full form.
+    $duplexf = 0 if $version =~ /Strigoniense/;
+
     antetpsalm($psalmi, $duplexf, $lang);
   }
 }

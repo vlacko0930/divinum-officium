@@ -40,7 +40,7 @@ sub headline {
     "<H2><FONT COLOR='RED'>Please note that 'Ad Matutinum' for this version ($vers) is still incomplete and under construction.</FONT></H2>\n"
     if ($vers =~ /1617/ || ($vers =~ /Cist/i && $month > 7)) && $hora =~ /Matutinum/;
   $output .=
-    "<H2><FONT COLOR='RED'>Esztergom (Strigoniense): the day hours are being restored from the 2014 <I>Psalterium Strigoniense</I>. Proper texts and Matins are not yet complete. The sanctoral is temporarily suppressed; where a complete temporal office exists, only that office is shown.</FONT></H2>\n"
+    "<H2><FONT COLOR='RED'>Esztergom (Strigoniense): the day hours use the 2014 <I>Psalterium Strigoniense</I>. While the proper and calendar are being prepared, every day and season uses the ordinary weekly office, and Tridentine proper texts are not substituted. Matins is not yet available.</FONT></H2>\n"
     if ($vers =~ /Strigoniense/i);
 
   if ($variant eq 'P') {

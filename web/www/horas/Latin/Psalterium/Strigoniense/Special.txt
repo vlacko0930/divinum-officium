@@ -61,6 +61,9 @@ $Deo gratias
 v. Tu in nobis es, Dómine, et nomen sanctum tuum invocátum est super nos: ne derelínquas nos, Dómine, Deus noster!
 $Deo gratias
 
+[Ant 4]
+Salva nos, * Dómine, vigilántes, custódi nos dormiéntes, ut vigilemus in Christo et requiescámus in pace!
+
 [Responsory breve Dominica Tertia]
 R.br. Inclína cor meum, Deus, * In testimónia tua.
 R. Inclína cor meum, Deus, * In testimónia tua.
@@ -116,9 +119,6 @@ $Qui vivis
 [Oratio Completorium]
 Deus, qui illúminas noctem et lucem post ténebras facis: concéde propítius, ut hanc noctem sine impediménto Sátanæ transeámus atque in matutínis horis ad sanctum servítium tuum recurréntes, tibi, Dómino, Deo vivo et vero, grátias et laudes referámus! Salvátor mundi, salva nos, omnípotens Deus, et lucem nobis concéde perpétuam, et pacem tuam nostris concéde tempóribus; a subitánea et improvísa morte nos erípere dignéris! Qui cum Deo Patre et Spíritu Sancto vivis et regnas, Deus, per ómnia sǽcula sæculórum.
 $Amen
-
-# Ferial day hours.  The psalm distribution and antiphons are those of the
-# Tridentine ferial psalter; the following are the Strigoniense proper texts.
 
 [Feria Laudes]
 !1 Cor 16:13-14
@@ -230,10 +230,6 @@ $Per Dominum
 [Oratio Sabbato Vespera]
 Iniquitátes nostras ne respícias, Deus, sed sola nobis misericórdia tua prosit indígnis!
 $Per Dominum
-
-# Ferial little hours.  The psalms, antiphons and orations agree with the
-# Tridentine ferial cursus; the capitula and short responsories are given here
-# so that the Strigoniense text is used in both languages.
 
 [Capitulum Feria Prima]
 !Joel 2:32

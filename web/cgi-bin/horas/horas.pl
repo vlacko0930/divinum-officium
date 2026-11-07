@@ -529,7 +529,13 @@ sub canticum {
 
   if ($hora eq 'Completorium') {
     push(@s, '#' . translate(substr($item, 1), $lang));
-    my ($w, $c) = getproprium("Ant 4$vespera", $lang);
+    my ($w, $c);
+
+    if ($version =~ /Strigoniense/) {
+      $w = strig_special('Ant 4', $lang);
+    } else {
+      ($w, $c) = getproprium("Ant 4$vespera", $lang);
+    }
 
     if ($w) {
       setbuild1($ite, 'special');
@@ -548,7 +554,7 @@ sub canticum {
     ($ant, $canticaTone) = split(";;", $ant) if $lang =~ /gabc/i;   # GABC: strip PsalmTone from Antiphone "...;;1D"
     $canticaTone =~ s/\s*$//;                                       # GABC: Remove trailing white space from CanticaTone
   } else {
-    $comment = ($winner =~ /sancti/i) ? 3 : 2;
+    $comment = $version =~ /Strigoniense/ ? 0 : ($winner =~ /sancti/i) ? 3 : 2;
     setcomment($item, 'Source', $comment, $lang, translate('Antiphona', $lang));
 
     $duplexf ||= $duplex > 2;
@@ -573,6 +579,10 @@ sub canticum {
   # The Benedictus in Tenebrae get their solemn tone in the database
   $canticaTone =~ s/^(\d)/solemn$1/
     if $hora eq 'Vespera' && $chantTone =~ /^solemnis|resurrectionis/ && $votive eq 'Hodie';
+
+  # In the Strigoniense office the antiphon before a canticle also uses the
+  # short form when the text marks one.
+  $duplexf = 0 if $version =~ /Strigoniense/;
 
   # Standard: Add canticle number 230–232 to antiphone like "Antiphone;;230"
   # GABC: Re-assemble Antiphone in format "Antiphone;;'230,1D'"
