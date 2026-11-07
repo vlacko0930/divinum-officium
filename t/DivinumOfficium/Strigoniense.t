@@ -79,4 +79,195 @@ my $matins = strig_page('11-02-2026', 'prayMatutinum', 'Latin');
 like($matins, qr/Matins is not yet available/, 'Strigoniense Matins shows an explicit notice');
 unlike($matins, qr/Veníte, exsultémus/, 'Strigoniense Matins does not fall back to the Tridentine invitatory');
 
+# One combined request per day and language exercises every day hour from the
+# same office.  The expected orations and canticle antiphons follow the
+# Strigoniense ferial cycle; Saturday Vespers is already the first Vespers of
+# Sunday, so it must use the Sunday texts.
+my @matrix = (
+  {
+    date => '11-08-2026',
+    latin => {
+      laudes     => 'Vox nostra te, Dómine, semper deprecétur',
+      vespera    => 'Víncula, Dómine, quǽsumus, humánæ pravitátis abrúmpe',
+      ant_laudes => 'Allelúia, allelúia, allelúia.',
+      ant_vespera => 'Tua est poténtia, tuum regnum, Dómine',
+    },
+    magyar => {
+      laudes     => 'A mi hangunk, Urunk, mindig hozzád fohászkodjék',
+      vespera    => 'Törd le, kérünk, Urunk, az emberi hitványság bilincseit',
+      ant_laudes => 'Alleluja, alleluja, alleluja.',
+      ant_vespera => 'Tiéd a hatalom, tiéd az ország, Urunk',
+    },
+    forbidden => [qr/Famíliam tuam/],
+  },
+  {
+    date => '11-09-2026',
+    latin => {
+      laudes     => 'Vide, Dómine, infirmitátes nostras',
+      vespera    => 'Esto nobis propítius, Deus',
+      ant_laudes => 'Benedíctus Deus Israel.',
+      ant_vespera => 'Magníficat ánima mea Dóminum',
+    },
+    magyar => {
+      laudes     => 'Lásd meg, Urunk, a mi gyöngeségeinket',
+      vespera    => 'Légy kegyelmes hozzánk, Isten',
+      ant_laudes => 'Áldott az Úr, Izráel Istene.',
+      ant_vespera => 'Magasztalja az én lelkem az Urat',
+    },
+    forbidden => [
+      qr/Domum tuam, Dómine/,
+      qr/Bene fundáta est/,
+      qr/O quam metuéndus est/,
+    ],
+  },
+  {
+    date => '11-10-2026',
+    latin => {
+      laudes     => 'Céléri nobis, quǽsumus, Dómine',
+      vespera    => 'Absólve, Dómine, quǽsumus, nostrórum víncula peccatórum',
+      ant_laudes => 'Eréxit Dóminus nobis cornu salútis',
+      ant_vespera => 'Exsúltet spíritus meus in Dómino',
+    },
+    magyar => {
+      laudes     => 'Siess, kérünk, Urunk, kegyességeddel megsegíteni minket',
+      vespera    => 'Oldd föl, Urunk, kérünk, a mi vétkeink bilincseit',
+      ant_laudes => 'Fölemelte nékünk az Isten az üdvösség erejét',
+      ant_vespera => 'Örvendezik az én lelkem üdvözítő Istenemben.',
+    },
+    forbidden => [],
+  },
+  {
+    date => '11-11-2026',
+    latin => {
+      laudes     => 'Clamántes ad te, Deus, dignánter exáudi',
+      vespera    => 'Tua nos, quǽsumus, grátia semper et prævéniat et sequátur',
+      ant_laudes => 'Salútem ex inimícis nostris',
+      ant_vespera => 'Respéxit Dóminus humilitátem meam',
+    },
+    magyar => {
+      laudes     => 'Méltóztassál, Isten, meghallani a hozzád kiáltók szavát',
+      vespera    => 'Járjon előttünk, kérjük, Urunk, és kísérjen a te malasztod',
+      ant_laudes => 'Adj szabadulást ellenségeinktől',
+      ant_vespera => 'Megláttad kicsinységemet, Uram.',
+    },
+    forbidden => [qr/beát[ui] Martín/, qr/Martínus Ábrahæ/],
+  },
+  {
+    date => '11-12-2026',
+    latin => {
+      laudes     => 'Tuére nos, supérne moderátor',
+      vespera    => 'Aufer a nobis, quǽsumus, Dómine, pravitátes',
+      ant_laudes => 'In sanctitáte servíámus Dómino',
+      ant_vespera => 'Fac, Deus, poténtiam in bráchio tuo',
+    },
+    magyar => {
+      laudes     => 'Vigyázz reánk, mennyei parancsolónk',
+      vespera    => 'Vedd el tőlünk, kérjük, Urunk, a hitványságot',
+      ant_laudes => 'Szolgáljunk az Úrnak szentségben',
+      ant_vespera => 'Cselekedjél, Isten, hatalmasságot',
+    },
+    forbidden => [qr/beáti Martíni Mártyris/, qr/Volo Pater/],
+  },
+  {
+    date => '11-13-2026',
+    latin => {
+      laudes     => 'Oculi nostri ad te, Dómine, semper inténdant',
+      vespera    => 'Pórrige nobis, Deus, déxteram tuam',
+      ant_laudes => 'Per víscera misericórdiæ Dei nostri',
+      ant_vespera => 'Depósuit poténtes, sanctos persequéntes',
+    },
+    magyar => {
+      laudes     => 'Szemeink, Urunk, mindig terád figyelmezzenek',
+      vespera    => 'Nyújtsd ki nekünk, Isten, a te jobbodat',
+      ant_laudes => 'Irgalmának mélységei által',
+      ant_vespera => 'Letette a kevélyeket, szentek üldözőit',
+    },
+    forbidden => [qr/Beáta Mater et intácta Virgo/],
+  },
+  {
+    date => '11-14-2026',
+    latin => {
+      laudes     => 'Inténde, Dómine, quǽsumus, súpplices tuos',
+      vespera    => 'Víncula, Dómine, quǽsumus, humánæ pravitátis abrúmpe',
+      ant_laudes => 'Illumináre, Dómine, his, qui in ténebris sedent',
+      ant_vespera => 'Tua est poténtia, tuum regnum, Dómine',
+    },
+    magyar => {
+      laudes     => 'Figyelmezz, kérjük, Urunk, a hozzád esdeklőkre',
+      vespera    => 'Törd le, kérünk, Urunk, az emberi hitványság bilincseit',
+      ant_laudes => 'Világosítsd meg azokat, Urunk',
+      ant_vespera => 'Tiéd a hatalom, tiéd az ország, Urunk',
+    },
+    forbidden => [
+      qr/semper rationabília meditántes/,
+      qr/Iniquitátes nostras ne respícias/,
+    ],
+  },
+);
+
+my @headings = (
+  'Ad Laudes', 'Ad Primam', 'Ad Tertiam', 'Ad Sextam', 'Ad Nonam',
+  'Ad Vesperas', 'Ad Completorium',
+);
+
+for my $case (@matrix) {
+  for my $lang (qw(Latin Magyar)) {
+    my $expected = $case->{lc $lang};
+    my $page = strig_page(
+      $case->{date},
+      'prayLaudesPrimaTertiaSextaNonaVesperaCompletorium',
+      $lang,
+    );
+    my $label = "$case->{date} $lang";
+
+    for my $heading (@headings) {
+      like($page, qr/\Q$heading\E/, "$label renders $heading");
+    }
+
+    like(
+      $page, qr/\Q$expected->{laudes}\E/,
+      "$label Lauds uses the Strigoniense ferial oration",
+    );
+    like(
+      $page, qr/\Q$expected->{vespera}\E/,
+      "$label Vespers uses the Strigoniense ferial oration"
+        . ($case->{date} eq '11-14-2026' ? ' (first Vespers of Sunday)' : ''),
+    );
+    like(
+      $page, qr/\Q$expected->{ant_laudes}\E/,
+      "$label Lauds uses the Strigoniense canticle antiphon",
+    );
+    like(
+      $page, qr/\Q$expected->{ant_vespera}\E/,
+      "$label Vespers uses the Strigoniense canticle antiphon",
+    );
+
+    unlike($page, qr/Mart[íi]n/, "$label has no St Martin proper");
+    unlike($page, qr/Márton/, "$label has no Hungarian St Martin proper");
+    unlike(
+      $page, qr/Sancta María, succúrre míseris/,
+      "$label has no Tridentine Marian suffrage",
+    );
+    unlike(
+      $page, qr/Szűz Mária \* győzd le nyomorúságunkat/,
+      "$label has no Hungarian Tridentine Marian suffrage",
+    );
+    unlike(
+      $page, qr/Suffragium \{Tridentinum\}/,
+      "$label does not retain a Tridentine suffrage label",
+    );
+    unlike(
+      $page, qr/Közbenjárás kérése \{tridenti\}/,
+      "$label does not retain a Hungarian Tridentine suffrage label",
+    );
+
+    for my $forbidden (@{$case->{forbidden}}) {
+      unlike(
+        $page, $forbidden,
+        "$label does not use the forbidden Tridentine proper text $forbidden",
+      );
+    }
+  }
+}
+
 done_testing;
