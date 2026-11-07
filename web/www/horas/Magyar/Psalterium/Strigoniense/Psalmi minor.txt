@@ -12,16 +12,25 @@ Boldogok, * kik törvényed szerint járnak.;;117;118(1-16);118(17-32)
 Áldj meg minket, Atya, Úr Isten, * őrizz meg minket, élő Istennek Fia, Úr Jézus Krisztus, világosíts meg minket, vigasztaló Szentlélek, Úr Isten, ma és életünknek minden idejében!;;234
 
 [Tertia Dominica]
-Légy mivélünk, mindenható, egy Isten: Atya és Fiú, Szentlélek Isten!;;118(33-48);118(49-64);118(65-80)
+Légy mivélünk, * mindenható, egy Isten: Atya és Fiú, Szentlélek Isten!;;118(33-48);118(49-64);118(65-80)
 
 [Sexta Dominica]
-Téged egynek lényegben, háromnak személyben igaz hittel vallunk, fölséges Úr Isten.;;118(81-96);118(97-112);118(113-128)
+Téged egynek, * lényegben, háromnak személyben igaz hittel vallunk, fölséges Úr Isten.;;118(81-96);118(97-112);118(113-128)
 
 [Nona Dominica]
-Igaz hittel megvalljuk: ugyanaz benned a lét, az élet és az értelem.;;118(129-144);118(145-160);118(161-176)
+Igaz hittel, * megvalljuk: ugyanaz benned a lét, az élet és az értelem.;;118(129-144);118(145-160);118(161-176)
 
 [Completorium]
 ;;4;30(1-6);90;133
 
 [Feria Prima]
 Te rendelted, Uram, * hogy minden parancsodat híven megőrizzük.;;53;118(1-16);118(17-32)
+
+[Feria Tertia]
+Vezess engem, Uram, * a te parancsolataid ösvényén!;;118(33-48);118(49-64);118(65-80)
+
+[Feria Sexta]
+Segíts rajtam, * és megszabadulok, Uram!;;118(81-96);118(97-112);118(113-128)
+
+[Feria Nona]
+Tekints reám, * és könyörülj rajtam, Uram!;;118(129-144);118(145-160);118(161-176)

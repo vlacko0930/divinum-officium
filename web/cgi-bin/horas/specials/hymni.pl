@@ -22,7 +22,8 @@ sub gethymn {
     ($versum, $cr) = getantvers('Versum', $ind, $lang);
   } else {    # minor hours
     $name = "Hymnus $hora";
-    $name =~ s/ / Pasc7 / if ($hora eq 'Tertia' && $dayname[0] =~ /Pasc7/);
+    $name =~ s/ / Pasc7 /
+      if ($version !~ /Strigoniense/ && $hora eq 'Tertia' && $dayname[0] =~ /Pasc7/);
 
     if ($hora eq 'Completorium' && $version =~ /^Ordo Praedicatorum/) {
       my %ant = %{setupstring($lang, 'Psalterium/Special/Minor Special.txt')};
@@ -72,6 +73,13 @@ sub gethymn {
 sub hymnusmajor {
   our ($hora, $version, $vespera, @dayname, %winner, $day, $month, $year, $dioecesis);
   my $lang = shift;
+
+  # The Strigoniense ordinary supplies its own hymn for every day.  Do not
+  # let an inherited Tridentine proper or a hymn transfer override it.
+  if ($version =~ /Strigoniense/) {
+    return ('', gettempora('Hymnus major') . " $hora");
+  }
+
   my $hymn = '';
   my $name = 'Hymnus';
   $name .= checkmtv($version, \%winner) if $hora eq 'Vespera';
@@ -132,6 +140,9 @@ sub doxology {
   my $lang = shift;
   my $dox = '';
   my $dname = '';
+
+  # Strigoniense hymns carry their own final doxology stanza.
+  return ('', '') if $version =~ /Strigoniense/;
 
   if (exists($winner{Doxology})) {
     my %w = columnsel($lang) ? %winner : %winner2;

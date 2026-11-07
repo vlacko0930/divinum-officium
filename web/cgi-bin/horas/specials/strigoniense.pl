@@ -4,10 +4,11 @@ use utf8;
 
 # Helpers for the Esztergom (Strigoniense) office.
 #
-# The 2014 Psalterium Strigoniense supplies a weekly psalter and the ordinary
-# of the day hours.  Proper texts of the Esztergom breviary are not part of
-# that source, so this version deliberately falls back to the Tridentine
-# proper where the Strigoniense psalter has no text of its own.
+# The 2014 Psalterium Strigoniense supplies the weekly psalter and the
+# ordinary of the day hours.  Until the proper and calendar are integrated,
+# every day and season uses this ordinary office; Tridentine proper and
+# seasonal texts are deliberately not consulted for the Strigoniense day
+# hours.
 
 #*** strig_special($name, $lang)
 # Return a section from Psalterium/Strigoniense/Special.txt, or ''.
@@ -44,42 +45,35 @@ sub strig_day_key {
   return 'Feria' . ($day + 1);
 }
 
+#*** strig_office_day_key($dayofweek, $hora, $vespera)
+# The day whose ordinary is used.  First Vespers belong to the following
+# liturgical day, even when the calendar day is still Saturday.
+sub strig_office_day_key {
+  my ($day, $hora, $vespera) = @_;
+  return '' unless defined $day && $day >= 0 && $day <= 6;
+
+  $day = ($day + 1) % 7 if defined $hora && $hora eq 'Vespera' && $vespera == 1;
+  return strig_day_key($day);
+}
+
 #*** strig_base_applicable($lang, @hours)
-# Common test for the ordinary office of the year.  It applies to Sundays and
-# ferias; proper and seasonal offices keep the Tridentine texts.
+# Common test for the Strigoniense ordinary office.  It applies to every day
+# and season while the proper is not yet available.
 sub strig_base_applicable {
   my ($lang, @hours) = @_;
-  our (
-    $version, $hora, $dayofweek, $winner, $antecapitulum,
-    $communetype, @dayname,
-  );
+  our ($version, $hora, $dayofweek);
 
   return 0 unless $version =~ /Strigoniense/;
   return 0 unless defined $dayofweek && $dayofweek >= 0 && $dayofweek <= 6;
-  return 0 unless $winner =~ /Tempora/;
-  return 0 unless ($dayname[0] || '') =~ /^(?:Epi|Pent)/;
   return 0 if @hours && !grep { $_ eq $hora } @hours;
-  return 0 if $antecapitulum;
-  return 0 if $communetype && $communetype =~ /ex/i;
-
-  my %w = columnsel($lang) ? %winner : %winner2;
-  return 0 if exists $w{"Ant $hora"};
 
   return 1;
 }
 
 #*** strig_psalter_applicable($lang, @hours)
-# True where the Strigoniense psalter supplies its own psalm texts.  On ferias
-# the psalm distribution and antiphons already agree with the Tridentine
-# ferial psalter, so only the proper texts are replaced.
+# True where the Strigoniense psalter supplies its own psalm texts.
 sub strig_psalter_applicable {
-  my ($lang, @hours) = @_;
-  our ($dayofweek, $rule);
-
-  return 0 unless strig_base_applicable($lang, @hours);
-  return 0 if $dayofweek == 0 && $rule && $rule =~ /Psalmi ex Psalterio|Psalmi Feria/i;
-
-  return 1;
+  return strig_base_applicable(@_);
 }
 
 sub strig_major_applicable {
@@ -87,8 +81,6 @@ sub strig_major_applicable {
   our ($hora, $vespera);
 
   return 0 unless $hora =~ /^(?:Laudes|Vespera)$/;
-  return 0 if $hora eq 'Vespera' && $vespera == 1;
-
   return strig_psalter_applicable($lang, 'Laudes', 'Vespera');
 }
 
@@ -96,13 +88,13 @@ sub strig_major_applicable {
 # Return the Strigoniense antiphon for the Benedictus or Magnificat.
 sub strig_canticle_ant {
   my $lang = shift;
-  our ($hora, $version, $dayofweek);
+  our ($hora, $version, $dayofweek, $vespera);
 
   return '' unless $version =~ /Strigoniense/;
   return '' unless $hora =~ /^(?:Laudes|Vespera)$/;
   return '' unless strig_major_applicable($lang);
 
-  my $day = strig_day_key($dayofweek);
+  my $day = strig_office_day_key($dayofweek, $hora, $vespera);
   my $key = $day eq 'Dominica'
     ? ($hora eq 'Laudes' ? 'Dominica Ant Laudes' : 'Dominica Ant Vespera')
     : "$day Ant " . ($hora eq 'Laudes' ? '2' : '3');
@@ -114,9 +106,9 @@ sub strig_canticle_ant {
 # for the ordinary office of the year.
 sub strig_psalmi_major {
   my $lang = shift;
-  our ($hora, $label, $dayofweek);
+  our ($hora, $label, $dayofweek, $vespera);
 
-  my $day = strig_day_key($dayofweek);
+  my $day = strig_office_day_key($dayofweek, $hora, $vespera);
   return undef if $day eq '';
 
   my %psalmi = %{ setupstring($lang, 'Psalterium/Strigoniense/Psalmi major.txt') };
@@ -131,13 +123,12 @@ sub strig_psalmi_major {
 }
 
 #*** strig_psalmi_minor($lang)
-# Return the Strigoniense psalm set for Sunday Prime and the little hours,
-# and for Compline on every day.  Return undef when the Tridentine set
-# should be used.
+# Return the Strigoniense psalm set for Prime, the little hours, and Compline
+# on every day.  Return undef when the hour is not one of these.
 sub strig_psalmi_minor {
   my $lang = shift;
   our (
-    $version, $hora, $dayofweek, $winner, $label, @dayname,
+    $version, $hora, $dayofweek, $label,
   );
 
   return undef unless $version =~ /Strigoniense/;
@@ -145,14 +136,10 @@ sub strig_psalmi_minor {
   my $key;
   if ($hora eq 'Completorium') {
     $key = 'Completorium';
-  } elsif ($hora eq 'Prima' && strig_base_applicable($lang, 'Prima')) {
+  } elsif ($hora eq 'Prima') {
     $key = $dayofweek == 0 ? 'Prima Dominica' : 'Feria Prima';
-  } elsif (
-    $dayofweek == 0
-    && $hora =~ /^(?:Tertia|Sexta|Nona)$/
-    && strig_base_applicable($lang, $hora)
-  ) {
-    $key = "$hora Dominica";
+  } elsif ($hora =~ /^(?:Tertia|Sexta|Nona)$/) {
+    $key = $dayofweek == 0 ? "$hora Dominica" : "Feria $hora";
   } else {
     return undef;
   }
@@ -171,7 +158,7 @@ sub strig_psalmi_minor {
 # Return the Strigoniense oration key for the current hour, or ''.
 sub strig_oratio_key {
   my $lang = shift;
-  our ($version, $hora, $dayofweek);
+  our ($version, $hora, $dayofweek, $vespera);
 
   return '' unless $version =~ /Strigoniense/;
 
@@ -183,7 +170,7 @@ sub strig_oratio_key {
     unless $hora =~ /^(?:Laudes|Vespera|Prima|Tertia|Sexta|Nona)$/
     && strig_base_applicable($lang, 'Laudes', 'Vespera', 'Prima', 'Tertia', 'Sexta', 'Nona');
 
-  my $day = strig_day_key($dayofweek);
+  my $day = strig_office_day_key($dayofweek, $hora, $vespera);
   return "Oratio Dominica $hora" if $day eq 'Dominica';
   return "Oratio $day $hora"     if $hora =~ /^(?:Laudes|Vespera)$/;
   return "Oratio Feria $hora";

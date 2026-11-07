@@ -238,6 +238,13 @@ if ($command =~ /setup(.*)/i) {
       foreach (@horas) {
         $hora = $_;    # precedence use global $hora !
 
+        # The Strigoniense Matins has not been restored yet.  Do not fall
+        # back to the inherited Tridentine Matins.
+        if ($version =~ /Strigoniense/i && $hora =~ /^Matutinum/i) {
+          print par_c("<H2><FONT COLOR='RED'>Esztergom (Strigoniense): Matins is not yet available in this version.</FONT></H2>");
+          next;
+        }
+
         if (/laudes/i && ($horas[0] !~ /laudes/i)) {
           precedence($date1);    # prevent lost commemorations
         } elsif (/vesper/i && ($horas[0] !~ /vesper/i)) {

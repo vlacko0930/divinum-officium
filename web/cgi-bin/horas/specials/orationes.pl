@@ -35,10 +35,11 @@ sub oratio {
   my $w;
 
   # Output the title.
+  my $source = $version =~ /Strigoniense/ ? 0 : $winner =~ /Sancti/ + 2;
   setcomment(
     $label, $params{special}
     ? ('Preces', 2)
-    : ('Source', $winner =~ /Sancti/ + 2), $lang,
+    : ('Source', $source), $lang,
   );
 
   # Special handling for days during the suppressed octave of the Epiphany.
@@ -262,7 +263,8 @@ sub oratio {
 
   %w = columnsel($lang) ? %winner : %winner2;    # prevent "contamination" from Oratio Dominica
 
-  if ($horamajor && $rank < 7) {
+  # The Strigoniense ordinary has no inherited commemorations.
+  if ($horamajor && $rank < 7 && $version !~ /Strigoniense/) {
 
     our $cwinner;
     our @commemoentries;

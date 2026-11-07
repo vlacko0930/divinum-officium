@@ -18,8 +18,6 @@ In mandátis * eius volet nimis.;;111
 Sit nomen Dómini * benedíctum in sǽcula.;;112
 Nos, qui vívimus, * benedícimus Dóminum.;;113
 
-# The ferial psalm sets agree with the Tridentine psalter, so they are
-# included here rather than copied.
 [Feria2 Laudes]
 @Psalterium/Psalmi/Psalmi major:Daya1 Laudes
 

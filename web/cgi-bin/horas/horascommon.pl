@@ -1914,6 +1914,15 @@ sub precedence {
       : 1;
   }
   if ($missa && $winner{Rank} =~ /Defunctorum/) { $votive = 'Defunct'; }
+
+  # The Strigoniense proper is not yet present.  Its day hours therefore use
+  # the ordinary office without Tridentine commemorations, suffragium, or
+  # preces, which could otherwise bring in inherited proper texts.
+  if ($version =~ /Strigoniense/
+    && $hora =~ /^(?:Laudes|Vespera|Prima|Tertia|Sexta|Nona|Completorium)$/)
+  {
+    $rule = "No suffragium\nNo Commemoration\nOmit Preces\n";
+  }
 }
 
 #*** climit1960($commemoratio)
@@ -2329,8 +2338,26 @@ sub papal_antiphon_dum_esset($) {
 # return $name of tempora
 # depending on caller
 sub gettempora {
-  our ($version, @dayname, $dayofweek, $day);
+  our ($version, @dayname, $dayofweek, $day, $hora, $vespera);
   my $caller = shift;
+
+  # The Strigoniense day hours use the ordinary weekly office for every day
+  # and season.  Keep their keys on the ordinary psalter even when the
+  # inherited calendar is in Advent, Paschaltide, or a saint's office.
+  if ($version =~ /Strigoniense/ && $hora =~ /^(?:Laudes|Vespera|Prima|Tertia|Sexta|Nona|Completorium)$/) {
+    my $litday = $dayofweek;
+    $litday = ($litday + 1) % 7 if $hora eq 'Vespera' && $vespera == 1;
+
+    return "Day$litday" if $caller eq 'Hymnus major';
+
+    if ($caller =~ /^(?:Capitulum (?:major|minor)|getfrompsalterium major)$/) {
+      return $litday == 0 ? 'Dominica' : 'Feria';
+    }
+
+    return 'Per Annum'  if $caller eq 'Lectio brevis Prima';
+    return ''           if $caller eq 'Prima responsory' || $caller eq 'Doxology';
+  }
+
   my $tname =
       ($dayname[0] =~ /^Adv[34]$/ && $caller eq 'Invitatorium') ? 'Adv3'
     : ($dayname[0] =~ /^Adv/ && $caller ne 'Doxology' && $caller ne 'Nunc dimittis') ? 'Adv'
