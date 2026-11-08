@@ -107,6 +107,12 @@ sub load_tempora {
   $cache_key .= ":$dioecesis" if $dioecesis && $dioecesis ne 'Generale';
   $dioecesis ||= 'Generale';
 
+  # The Strigoniense stub deliberately inherits no Tridentine transfers.
+  if ($version =~ /^Strigoniense/) {
+    %{$_dCACHE{$cache_key}} = ();
+    return;
+  }
+
   unless (is_cached($cache_key)) {
 
     my (@tempora) = ();
@@ -135,6 +141,12 @@ sub load_transfers {
   $dioecesis ||= '';
   $dioecesis = '' if $dioecesis eq 'Generale';
   my $cache_key = $dioecesis ? lcfirst "$type:$version:$dioecesis:$year" : lcfirst "$type:$version:$year";
+
+  # The Strigoniense stub deliberately inherits no Tridentine transfers.
+  if ($version =~ /^Strigoniense/) {
+    %{$_dCACHE{$cache_key}} = ();
+    return;
+  }
 
   unless (is_cached($cache_key)) {
 

@@ -1,0 +1,10 @@
+[Officium]
+Hétköznap
+
+[Rank]
+;;Feria;;1
+
+[Rule]
+No suffragium
+No Commemoration
+Omit Preces

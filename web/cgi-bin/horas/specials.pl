@@ -617,7 +617,7 @@ sub getantvers {
     # Only the Strigoniense ordinary and psalter may supply these texts.
     $w = strig_canticle_ant($lang) if $item eq 'Ant';
     $w ||= getfrompsalterium($item, $ind, $lang);
-    setbuild2("$item $ind ex Strigoniense");
+    setbuild2('Psalterium/Strigoniense');
   } else {
     ($w, $c) = getproprium("$item $ind", $lang, 1);
 
@@ -728,7 +728,9 @@ sub setbuild {
   my $comment = shift;
   $source = $file;
 
-  if ($source =~ /(.*?)\//s) {
+  if ($source =~ m{^(Psalterium/Strigoniense)/}) {
+    $source = $1;
+  } elsif ($source =~ /(.*?)\//s) {
     $source = $1 unless $1 =~ /Sancti/;
     $source =~ s/\.txt$//;
   }

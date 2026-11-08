@@ -44,19 +44,35 @@ my $ferial_lauds = strig_page('11-02-2026', 'prayLaudes', 'Magyar');
 like($ferial_lauds, qr/Könyörülj rajtam\./, 'Hungarian ferial Lauds uses the short antiphon before the psalm');
 like($ferial_lauds, qr/Könyörülj rajtam, Isten!/, 'Hungarian ferial Lauds uses the full antiphon after the psalm');
 like($ferial_lauds, qr/Lásd meg, Urunk, a mi gyöngeségeinket/, 'Hungarian ferial Lauds uses the Strigoniense oration');
+like($ferial_lauds, qr/Hétköznap ~ Rendes/, 'Hungarian ferial Lauds uses the generic ordinary heading');
+like($ferial_lauds, qr/Kérjük, vegye figyelembe/, 'Hungarian pages show a localized Strigoniense warning');
+unlike($ferial_lauds, qr/Please note that the database for this version/, 'Hungarian pages do not show the English Strigoniense warning');
+unlike($ferial_lauds, qr/Per Annum/, 'Hungarian ferial Lauds does not use a Per Annum source label');
 
 my $little_hour = strig_page('11-02-2026', 'prayTertia', 'Magyar');
 like($little_hour, qr/Vezess engem, Uram\./, 'Hungarian ferial Terce uses the short antiphon');
 like($little_hour, qr/Vezess engem, Uram, a te parancsolataid ösvényén!/, 'Hungarian ferial Terce uses the full antiphon');
+like($little_hour, qr/Olvasmány, válaszos ének, vers \{a zsoltáros részből az adott napra\}/, 'Hungarian ferial Terce labels the capitulum as ordinary psalter text');
+unlike($little_hour, qr/Per Annum/, 'Hungarian ferial Terce does not use a Per Annum source label');
+
+my $ferial_prime = strig_page('11-02-2026', 'prayPrima', 'Latin');
+like($ferial_prime, qr/Capitulum Responsorium Versus \{ex Psalterio secundum diem\}/, 'Prime labels the capitulum as ordinary psalter text');
+like($ferial_prime, qr/Lectio brevis \{ex Psalterio secundum diem\}/, 'Prime labels the short reading as ordinary psalter text');
+unlike($ferial_prime, qr/Per Annum/, 'Prime does not use a Per Annum source label');
 
 my $first_vespers = strig_page('11-07-2026', 'prayVespera', 'Magyar');
 like($first_vespers, qr/Ülj az én jobbomra\./, 'Saturday first Vespers uses the short Sunday antiphon');
 like($first_vespers, qr/Ülj az én jobbomra, mondá az Úr az én Uramnak\./, 'Saturday first Vespers uses the full Sunday antiphon');
 unlike($first_vespers, qr/Áldott az Úr, az én kősziklám/, 'Saturday first Vespers does not use the Saturday psalter');
+like($first_vespers, qr/Vasárnap ~ Rendes/, 'Saturday first Vespers has the ordinary Sunday heading and rank');
+unlike($first_vespers, qr/Szombat ~ Rendes/, 'Saturday first Vespers does not use the Saturday heading and rank');
 
 my $sunday_vespers = strig_page('11-08-2026', 'prayVespera', 'Latin');
 like($sunday_vespers, qr/Sede a dextris meis/, 'Sunday Vespers uses the Strigoniense Sunday psalter');
 unlike($sunday_vespers, qr/ferial psalm sets agree/, 'Sunday Vespers does not render source comments as antiphons');
+like($sunday_vespers, qr/Dominica ~ Ordinarium/, 'Sunday Vespers uses the generic ordinary heading');
+like($sunday_vespers, qr/Please note that the database for this version/, 'Latin pages show the Strigoniense warning');
+unlike($sunday_vespers, qr/Per Annum/, 'Sunday Vespers does not use a Per Annum source label');
 
 my $christmas = strig_page('12-25-2026', 'prayLaudes', 'Latin');
 like($christmas, qr/Oculi nostri ad te, Dómine/, 'Christmas uses the ordinary ferial oration');
@@ -78,6 +94,10 @@ unlike($compline, qr/Salva nos, Dómine/, 'Hungarian Compline does not use the L
 my $matins = strig_page('11-02-2026', 'prayMatutinum', 'Latin');
 like($matins, qr/Matins is not yet available/, 'Strigoniense Matins shows an explicit notice');
 unlike($matins, qr/Veníte, exsultémus/, 'Strigoniense Matins does not fall back to the Tridentine invitatory');
+
+my $hungarian_matins = strig_page('11-02-2026', 'prayMatutinum', 'Magyar');
+like($hungarian_matins, qr/a matutinum ebben a verzióban még nem érhető el/, 'Hungarian Matins shows a localized notice');
+unlike($hungarian_matins, qr/Matins is not yet available/, 'Hungarian Matins does not show the English notice');
 
 # One combined request per day and language exercises every day hour from the
 # same office.  The expected orations and canticle antiphons follow the
@@ -210,6 +230,21 @@ my @headings = (
   'Ad Vesperas', 'Ad Completorium',
 );
 
+my %ordinary_heading = (
+  '11-08-2026' => { Latin => 'Dominica ~ Ordinarium', Magyar => 'Vasárnap ~ Rendes' },
+  '11-09-2026' => { Latin => 'Feria ~ Ordinarium',    Magyar => 'Hétköznap ~ Rendes' },
+  '11-10-2026' => { Latin => 'Feria ~ Ordinarium',    Magyar => 'Hétköznap ~ Rendes' },
+  '11-11-2026' => { Latin => 'Feria ~ Ordinarium',    Magyar => 'Hétköznap ~ Rendes' },
+  '11-12-2026' => { Latin => 'Feria ~ Ordinarium',    Magyar => 'Hétköznap ~ Rendes' },
+  '11-13-2026' => { Latin => 'Feria ~ Ordinarium',    Magyar => 'Hétköznap ~ Rendes' },
+  '11-14-2026' => { Latin => 'Sabbato ~ Ordinarium',  Magyar => 'Szombat ~ Rendes' },
+);
+
+my %ordinary_source = (
+  Latin  => 'ex Psalterio secundum diem',
+  Magyar => 'a zsoltáros részből az adott napra',
+);
+
 for my $case (@matrix) {
   for my $lang (qw(Latin Magyar)) {
     my $expected = $case->{lc $lang};
@@ -223,6 +258,25 @@ for my $case (@matrix) {
     for my $heading (@headings) {
       like($page, qr/\Q$heading\E/, "$label renders $heading");
     }
+
+    like(
+      $page, qr/\Q$ordinary_heading{$case->{date}}{$lang}\E/,
+      "$label uses the generic ordinary heading with no inherited rank",
+    );
+    my $source_label = '{' . $ordinary_source{$lang} . '}';
+    like(
+      $page, qr/\Q$source_label\E/,
+      "$label labels its ordinary text as the daily psalter",
+    );
+    unlike($page, qr/Per Annum/, "$label has no Per Annum source label");
+    unlike(
+      $page, qr/\{ex Proprio (?:de Tempore|Sanctorum)\}/,
+      "$label has no Tridentine proper source label",
+    );
+    unlike(
+      $page, qr/\{ex Commune aut Festo\}/,
+      "$label has no Tridentine common source label",
+    );
 
     like(
       $page, qr/\Q$expected->{laudes}\E/,

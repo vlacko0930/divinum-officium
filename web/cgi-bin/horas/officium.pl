@@ -241,7 +241,8 @@ if ($command =~ /setup(.*)/i) {
         # The Strigoniense Matins has not been restored yet.  Do not fall
         # back to the inherited Tridentine Matins.
         if ($version =~ /Strigoniense/i && $hora =~ /^Matutinum/i) {
-          print par_c("<H2><FONT COLOR='RED'>Esztergom (Strigoniense): Matins is not yet available in this version.</FONT></H2>");
+          my $notice = strig_translate_text('Strigoniense Matins notice', $lang1);
+          print par_c("<H2><FONT COLOR='RED'>$notice</FONT></H2>");
           next;
         }
 

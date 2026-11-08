@@ -79,7 +79,11 @@ sub oratio {
     my $strig_oratio = strig_special($strig_key, $lang);
     if ($strig_oratio ne '') {
       $w = $strig_oratio;
-      setbuild2('Oratio Strigoniense');
+      setbuild(
+        'Psalterium/Strigoniense/Special',
+        $strig_key,
+        'Oratio ord',
+      );
     }
   }
 
@@ -90,7 +94,9 @@ sub oratio {
     if (!$w) { $i = 4 - $i; $w = $c{"Oratio $i"}; }
     if (!$w) { $w = $c{Oratio}; }
   }
-  if ($hora ne 'Matutinum') { setbuild($winner, "Oratio $ind", 'Oratio ord'); }
+  if ($hora ne 'Matutinum' && $version !~ /Strigoniense/) {
+    setbuild($winner, "Oratio $ind", 'Oratio ord');
+  }
   my $i = $ind;
 
   if (!$w) {    # if none yet:
@@ -101,7 +107,9 @@ sub oratio {
       $w = $w{'Oratio 2'};
     }
     if (!$w) { $i = 4 - $i; $w = $w{"Oratio $i"}; }    # or, try other Vesper
-    if ($w && $hora ne 'Matutinum') { setbuild($winner, "Oratio $i", 'try'); }
+    if ($w && $hora ne 'Matutinum' && $version !~ /Strigoniense/) {
+      setbuild($winner, "Oratio $i", 'try');
+    }
   }
 
   # Special processing for Common of Supreme Pontiffs.

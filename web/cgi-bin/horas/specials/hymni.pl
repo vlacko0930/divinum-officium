@@ -43,6 +43,11 @@ sub gethymn {
     my $strig = strig_special($name, $lang);
     if ($strig ne '') {
       $hymn = $strig;
+      setbuild(
+        'Psalterium/Strigoniense/Special',
+        $name,
+        'Hymnus ord',
+      );
     } else {
       my %h = %{setupstring($lang, "Psalterium/Special/$hymnsource Special.txt")};
       $name = tryoldhymn(\%h, $name);

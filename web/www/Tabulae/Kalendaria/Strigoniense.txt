@@ -1,0 +1,6 @@
+# Strigoniense calendar stub.
+#
+# The 2014 Esztergom proper and calendar are not integrated yet.  This file
+# intentionally has no entries: every day is handled by the ordinary stub in
+# Tempora/Strigoniense.  Add proper entries here when the Esztergom calendar
+# becomes available.

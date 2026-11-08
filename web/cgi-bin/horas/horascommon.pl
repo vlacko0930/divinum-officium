@@ -24,12 +24,6 @@ sub occurrence {
   # globals readonly
   our ($testmode, $hora, $missa, $caller, $datafolder, $lang2);
 
-  # TEMPORARY: the Strigoniense proper/calendar is not yet available, and the
-  # version inherits the Trident sanctoral.  It is put into temporal mode below
-  # (once the day's temporal file is known), so that inherited saints do not
-  # appear.  Remove this once the Esztergom proper exists.
-  local $testmode = $testmode;
-
   # globals set/mod here
   our ($winner, $rank, $commemoratio, $comrank, $commune, $communetype);
   our ($tname, $sname, $sanctoraloffice);
@@ -67,25 +61,49 @@ sub occurrence {
     $dayofweek = day_of_week($day, $month, $year);              # 0 = Sunday, 1 = Mpnday, etc.
   }
 
-  # TEMPORARY: Strigoniense has no proper/calendar of its own yet, so use the
-  # temporal office instead of the inherited Trident sanctoral.  Only do this
-  # when the temporal file is a real office; "vide Sancti" stubs (for example
-  # the Christmas octave) and missing files fall back to the inherited office.
-  if ($version =~ /^Strigoniense/i) {
-    my $force_tday = subdirname('Tempora', $version)
-      . "$weekname"
-      . (($weekname !~ /Nat/i) ? "-$dayofweek" : "");
-    my $force_tfile = "$datafolder/Latin/$force_tday.txt";
+  # The Strigoniense proper and calendar are not yet available.  Every day
+  # uses a small local ordinary stub, and nothing is read from the inherited
+  # Tridentine calendar, sanctoral, or transfer tables.
+  if ($version =~ /^Strigoniense/i && !$missa) {
+    my $strig_key  = strig_ordinary_key($dayofweek);
+    my $strig_file = "Tempora/Strigoniense/$strig_key";
+    my $strig_name = 'Strig';
 
-    if (-e $force_tfile && open(my $fh, '<:encoding(UTF-8)', $force_tfile)) {
-      local $/;
-      my $text = <$fh> || '';
-      close $fh;
-      my $rank = $text;
-      $rank =~ s/\A.*?\[Rank\]\s*//s;
-      $rank =~ s/\[.*//s;
-      $testmode = 'Temporal' unless $rank =~ /vide\s+Sancti/i;
+    %tempora = %{setupstring('Latin', "$strig_file.txt")};
+    $trank   = $tempora{Rank};
+    @trank   = split(";;", $trank);
+    $tname   = "$strig_file.txt";
+    $tfile   = $strig_file;
+    $tvesp   = $tomorrow ? 1 : ($hora =~ /(Vespera|Completorium)/i ? 3 : 2);
+    $sname   = '';
+    $svesp   = 0;
+    $cvespera = 0;
+    %saint   = ();
+    @srank   = ();
+    $sanctoraloffice = 0;
+    @commemoentries  = ();
+    $commemoratio    = '';
+    $comrank         = 0;
+    $scriptura       = '';
+    $transfervigil   = '';
+    $laudesonly      = '';
+    $initia          = 0;
+    $winner          = $tname;
+    $rank            = $trank[2];
+    $commune         = '';
+    $communetype     = '';
+
+    my @strig_name = (
+      $strig_name,
+      "$trank[0]\t$trank[1]",
+      '',
+    );
+    if ($tomorrow) {
+      @tomorrowname = @strig_name;
+    } else {
+      @dayname = @strig_name;
     }
+    return;
   }
 
   my @officename = ($weekname, '', '');
@@ -453,8 +471,7 @@ sub occurrence {
     && $srank[2] < 1.4
     && !$transfervigil
     && (!$tommorow || $version =~ /196/)
-    && $testmode ne 'Sanctoral'
-    && $version !~ /^Strigoniense/i)
+    && $testmode ne 'Sanctoral')
   {
     $scriptura = $tname unless $tomorrow;
 
@@ -856,7 +873,7 @@ sub occurrence {
     }
   }
 
-  if ($month == 1 && $day < 14 && $officename[0] !~ /Epi/i) { $officename[0] = "Nat$day"; }
+  if ($version !~ /Strigoniense/ && $month == 1 && $day < 14 && $officename[0] !~ /Epi/i) { $officename[0] = "Nat$day"; }
 
   if ($tomorrow) {
     @tomorrowname = @officename;
@@ -909,6 +926,33 @@ sub concurrence {
   my @cwrank = $csanctoraloffice ? @csrank : @ctrank;
 
   occurrence($day, $month, $year, $version, $dioecesis, 0);    # get today's office
+
+  # The Strigoniense ordinary has no sanctoral concurrence yet.  Saturday
+  # evening is the first Vespers of the ordinary Sunday; every other evening
+  # is the second Vespers of the ordinary day.
+  if ($version =~ /^Strigoniense/i && !$missa) {
+    if ($dayofweek == 6) {
+      $winner = $cwinner;
+      @dayname = @tomorrowname;
+      $rank = $crank;
+      $vespera = 1;
+      $tvesp = 1;
+    } else {
+      $vespera = 3;
+      $tvesp = 3;
+    }
+    $cvespera = 0;
+    $svesp = 0;
+    $octvespera = 0;
+    $commemoratio = '';
+    $comrank = 0;
+    @commemoentries = ();
+    @ccommemoentries = ();
+    $commune = $communetype = '';
+    $antecapitulum = $antecapitulum2 = '';
+    return;
+  }
+
   %winner = $sanctoraloffice ? %saint : %tempora;
   my @wrank = $sanctoraloffice ? @srank : @trank;
 
@@ -1804,7 +1848,7 @@ sub precedence {
     }
   }
 
-  if (my $vtv = $votive ne 'Hodie' ? $votive : '') {
+  if ($version !~ /Strigoniense/ && (my $vtv = $votive ne 'Hodie' ? $votive : '')) {
     if ($vtv =~ /C12/i) {
 
       # C12: Officium parvum BMV
@@ -1914,15 +1958,6 @@ sub precedence {
       : 1;
   }
   if ($missa && $winner{Rank} =~ /Defunctorum/) { $votive = 'Defunct'; }
-
-  # The Strigoniense proper is not yet present.  Its day hours therefore use
-  # the ordinary office without Tridentine commemorations, suffragium, or
-  # preces, which could otherwise bring in inherited proper texts.
-  if ($version =~ /Strigoniense/
-    && $hora =~ /^(?:Laudes|Vespera|Prima|Tertia|Sexta|Nona|Completorium)$/)
-  {
-    $rule = "No suffragium\nNo Commemoration\nOmit Preces\n";
-  }
 }
 
 #*** climit1960($commemoratio)
@@ -1984,6 +2019,15 @@ sub rankname {
   my %t = %{setupstring($lang, 'Psalterium/Comment.txt')};
   my @ranktable = split("\n", $t{Festa});
   my $rankname;
+
+  # The Strigoniense stub has no proper or sanctoral rank yet.  Keep its
+  # heading deliberately generic instead of borrowing a seasonal Tridentine
+  # Sunday name.
+  if ($version =~ /Strigoniense/) {
+    return defined &strig_translate_text
+      ? strig_translate_text('Strig ordinarium', $lang)
+      : 'Ordinarium';
+  }
 
   if ( ($latname !~ /(?:Die|Feria|Sabbato|^In Octava)/i)
     && ($winner !~ /Pasc[07]-[1-6]/ || $dayofweek == 0))

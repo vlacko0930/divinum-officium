@@ -422,3 +422,12 @@ Salve Regina
 
 [#Commemoratio defunctorum]
 #Commemoratio defunctorum
+
+[Strig ordinarium]
+Ordinarium
+
+[Strigoniense warning]
+Please note that the database for this version (%s) is still incomplete and under construction. Esztergom (Strigoniense): the day hours use the 2014 <I>Psalterium Strigoniense</I>. While the proper and calendar are being prepared, every day and season uses the ordinary weekly office, and Tridentine proper texts are not substituted. Matins is not yet available.
+
+[Strigoniense Matins notice]
+Esztergom (Strigoniense): Matins is not yet available in this version.

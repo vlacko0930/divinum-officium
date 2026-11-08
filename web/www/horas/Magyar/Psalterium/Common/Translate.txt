@@ -237,3 +237,12 @@ Mennyországnak Királynéja
 
 [#Conclusio]
 #Befejezés
+
+[Strig ordinarium]
+Rendes
+
+[Strigoniense warning]
+Kérjük, vegye figyelembe, hogy ennek a verziónak (%s) az adatbázisa még hiányos és készülőben van. Esztergom (Strigoniense): a napi zsolozsmák a 2014-es <I>Psalterium Strigoniense</I> szövegét használják. Amíg a proprium és a naptár elkészül, minden nap és időszak a rendes heti officiumot használja, a tridenti proprium szövegei nem kerülnek helyettesítésre. A matutinum még nem érhető el.
+
+[Strigoniense Matins notice]
+Esztergom (Strigoniense): a matutinum ebben a verzióban még nem érhető el.

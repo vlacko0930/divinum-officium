@@ -70,18 +70,39 @@ sub strig_base_applicable {
   return 1;
 }
 
-#*** strig_psalter_applicable($lang, @hours)
-# True where the Strigoniense psalter supplies its own psalm texts.
-sub strig_psalter_applicable {
-  return strig_base_applicable(@_);
-}
-
 sub strig_major_applicable {
   my $lang = shift;
   our ($hora, $vespera);
 
   return 0 unless $hora =~ /^(?:Laudes|Vespera)$/;
-  return strig_psalter_applicable($lang, 'Laudes', 'Vespera');
+  return strig_base_applicable($lang, 'Laudes', 'Vespera');
+}
+
+#*** strig_ordinary_key($dayofweek)
+# Key of the Strigoniense ordinary day in Tempora/Strigoniense.
+sub strig_ordinary_key {
+  my $day = shift;
+  return 'Dominica' if defined $day && $day == 0;
+  return 'Sabbato'  if defined $day && $day == 6;
+  return 'Feria';
+}
+
+#*** strig_translate_text($name, $lang)
+# Read a translation directly from Translate.txt.  This also works before
+# load_languages_data() has populated the usual translation tables.
+sub strig_translate_text {
+  my ($name, $lang) = @_;
+  my $file_lang =
+      $lang =~ /Latin/ ? 'Latin'
+    : $lang =~ /^Magyar/ ? 'Magyar'
+    : $lang;
+
+  my %translation = %{setupstring($file_lang, 'Psalterium/Common/Translate.txt')};
+  return $translation{$name}
+    if defined $translation{$name} && $translation{$name} ne '';
+
+  my %latin = %{setupstring('Latin', 'Psalterium/Common/Translate.txt')};
+  return defined $latin{$name} && $latin{$name} ne '' ? $latin{$name} : $name;
 }
 
 #*** strig_canticle_ant($lang)

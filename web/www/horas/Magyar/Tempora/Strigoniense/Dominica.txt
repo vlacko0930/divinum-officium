@@ -1,0 +1,10 @@
+[Officium]
+Vasárnap
+
+[Rank]
+;;Semiduplex;;5
+
+[Rule]
+No suffragium
+No Commemoration
+Omit Preces

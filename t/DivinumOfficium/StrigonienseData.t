@@ -346,4 +346,64 @@ for my $lang (@langs) {
   );
 }
 
+# The Strigoniense calendar and transfer tables are deliberately empty.  Every
+# day is supplied by the ordinary stubs below, and no Tridentine sanctoral or
+# transfer entry may be inherited through data.txt.
+my $data_path = 'web/www/Tabulae/data.txt';
+open my $data_fh, '<:encoding(UTF-8)', $data_path
+  or die "Cannot read $data_path: $!";
+my @data_rows = <$data_fh>;
+close $data_fh;
+chomp @data_rows;
+my ($strig_data) = grep { /^Strigoniense Tridentinum 1570,/ } @data_rows;
+is(
+  $strig_data,
+  'Strigoniense Tridentinum 1570,Strigoniense,Strigoniense,Strigoniense,,',
+  'Strigoniense uses its own calendar/transfer stub and has no base fallback',
+);
+
+my $strig_kalendar = 'web/www/Tabulae/Kalendaria/Strigoniense.txt';
+ok(-f $strig_kalendar, 'Strigoniense has its own calendar stub');
+open my $kalendar_fh, '<:encoding(UTF-8)', $strig_kalendar
+  or die "Cannot read $strig_kalendar: $!";
+my @kalendar_lines = <$kalendar_fh>;
+close $kalendar_fh;
+is(
+  scalar(grep { /=/ } @kalendar_lines), 0,
+  'Strigoniense calendar stub contains no inherited day entries',
+);
+
+for my $lang (@langs) {
+  for my $key (qw(Dominica Feria Sabbato)) {
+    my $path = "web/www/horas/$lang/Tempora/Strigoniense/$key.txt";
+    ok(-f $path, "$lang Strigoniense $key ordinary stub exists");
+
+    my $parsed = raw_sections($path);
+    my $officium = find_unconditional($parsed, 'Officium');
+    my $rank = find_unconditional($parsed, 'Rank');
+    my $rule = find_unconditional($parsed, 'Rule');
+    ok($officium && length section_text($officium),
+      "$lang Strigoniense $key stub has an Officium");
+    ok($rank && section_text($rank) =~ /\A;;[^;]+;;\d+\z/,
+      "$lang Strigoniense $key stub has a generic rank");
+    ok($rule && section_text($rule) =~ /No Commemoration/,
+      "$lang Strigoniense $key stub suppresses commemorations");
+    ok($rule && section_text($rule) =~ /No suffragium/,
+      "$lang Strigoniense $key stub suppresses the suffrage");
+    ok($rule && section_text($rule) =~ /Omit Preces/,
+      "$lang Strigoniense $key stub suppresses the preces");
+
+    my $loaded = setupstring($lang, "Tempora/Strigoniense/$key.txt");
+    ok(
+      ref $loaded eq 'HASH' && $loaded->{Officium} =~ /\S/,
+      "$lang Strigoniense $key stub loads through setupstring",
+    );
+    unlike(
+      join("\n", map { @{$_->{lines}} } @{$parsed->{sections}}),
+      qr/^\s*\@(?:Tempora|Sancti)\//m,
+      "$lang Strigoniense $key stub does not include a Tridentine proper",
+    );
+  }
+}
+
 done_testing;

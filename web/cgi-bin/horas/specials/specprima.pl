@@ -11,9 +11,18 @@ sub lectio_brevis_prima {
   my %brevis = %{setupstring($lang, 'Psalterium/Special/Prima Special.txt')};
   my $name = gettempora("Lectio brevis Prima");
   my $brevis = $brevis{$name};
-  my $comment = $name =~ /per annum/i ? 5 : 1;
+  my $comment =
+    $version =~ /Strigoniense/ ? 0
+    : $name =~ /per annum/i ? 5
+    : 1;
 
-  setbuild('Psalterium/Special/Prima Special', $name, 'Lectio brevis ord');
+  setbuild(
+    $version =~ /Strigoniense/
+    ? 'Psalterium/Strigoniense/Special'
+    : 'Psalterium/Special/Prima Special',
+    $name,
+    'Lectio brevis ord',
+  );
 
   #look for [Lectio Prima]
   if ($version !~ /1955|196|cist|Strigoniense/i) {
@@ -79,7 +88,15 @@ sub capitulum_prima {
   my $capit = $brevis{$key} . "\n\$Deo gratias\n_\n";
   my $strig = strig_special("Capitulum $key Prima", $lang);
   $capit = $strig . "\n_\n" if $strig ne '';
-  setbuild1('Capitulum', "Psalterium $key");
+  if ($version =~ /Strigoniense/) {
+    setbuild(
+      'Psalterium/Strigoniense/Special',
+      "Capitulum $key Prima",
+      'Capitulum ord',
+    );
+  } else {
+    setbuild1('Capitulum', "Psalterium $key");
+  }
 
   # Shorter pause at Flexa in Ant. Monasticum compared to Ant. Romanum
   $capit =~ s/†\(\;\)/†(,)/g if $lang eq 'Latin-gabc' && $version =~ /monastic/i;

@@ -257,7 +257,10 @@ sub capitulum_minor {
   $name = 'Completorium' if $hora eq 'Completorium';
   my $capit = $capit{$name} =~ s/\s*$//r;
 
-  my $comment = $name =~ /Dominica|Feria/ ? 5 : 1;
+  my $comment =
+    $version =~ /Strigoniense/ ? 0
+    : $name =~ /Dominica|Feria/ ? 5
+    : 1;
   setbuild(
     $version =~ /Strigoniense/
     ? 'Psalterium/Strigoniense/Special'
