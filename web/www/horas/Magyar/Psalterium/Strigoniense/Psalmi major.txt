@@ -5,11 +5,11 @@
 # Az énekelt tételek kottája nélkül, szövegként kerültek felhasználásra.
 
 [Dominica Laudes]
-Hatalomba öltözött az Úr, * s felövezte magát erővel, alleluja, alleluja, alleluja.;;92
+Hatalomba * öltözött az Úr, s felövezte magát erővel, alleluja, alleluja, alleluja.;;92
 Dicsőség, áldás és tisztelet * a trónuson ülőnek: az örökkön örökké élő Istennek!;;99
 Könyörüljön rajtunk az Isten, * és áldjon meg minket, világosítsa reánk orcáját, s könyörüljön rajtunk!;;62;66
 Áldás és fényesség, * bölcsesség és hálaadás, tisztesség és dicsőség Istenünknek mindörökké!;;210
-Szent, szent, szent az Úr Isten, * a mindenható, aki volt, aki van s a ki eljövendő.;;148;149;150
+Szent, * szent, szent az Úr Isten, a mindenható, aki volt, aki van s a ki eljövendő.;;148;149;150
 
 [Dominica Vespera]
 Ülj az én jobbomra, * mondá az Úr az én Uramnak.;;109
