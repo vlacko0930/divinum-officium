@@ -86,6 +86,60 @@ my $all_saints = strig_page('11-01-2026', 'prayLaudes', 'Latin');
 like($all_saints, qr/Vox nostra te, Dómine, semper deprecétur/, 'All Saints uses the ordinary Sunday oration');
 unlike($all_saints, qr/Vidi turbam magnam/, 'All Saints does not use the Tridentine proper');
 
+# The ordinary office is intentionally season-independent.  Check the major
+# Sundays whose Tridentine propers would otherwise be the most likely leak.
+my @seasonal_sundays = (
+  {
+    date      => '11-29-2026',
+    season    => 'Advent',
+    forbidden => qr/Roráte caeli désuper/,
+  },
+  {
+    date      => '02-22-2026',
+    season    => 'Lent',
+    forbidden => qr/Invocábit me, et ego exáudiam eum/,
+  },
+  {
+    date      => '04-05-2026',
+    season    => 'Easter',
+    forbidden => qr/Resurréxi, et adhuc tecum sum/,
+  },
+  {
+    date      => '05-24-2026',
+    season    => 'Pentecost',
+    forbidden => qr/Spíritus Dómini replévit orbem terrárum/,
+  },
+);
+
+for my $case (@seasonal_sundays) {
+  my $page = strig_page(
+    $case->{date},
+    'prayLaudesPrimaTertiaSextaNonaVesperaCompletorium',
+    'Latin',
+  );
+
+  like(
+    $page, qr/Dominica ~ Ordinarium/,
+    "$case->{season} Sunday uses the ordinary Sunday heading",
+  );
+  like(
+    $page, qr/Vox nostra te, Dómine, semper deprecétur/,
+    "$case->{season} Sunday uses the ordinary Sunday oration",
+  );
+  unlike(
+    $page, $case->{forbidden},
+    "$case->{season} Sunday does not use the Tridentine proper",
+  );
+  unlike(
+    $page, qr/\{ex Proprio (?:de Tempore|Sanctorum)\}/,
+    "$case->{season} Sunday has no Tridentine proper source label",
+  );
+  unlike(
+    $page, qr/Per Annum/,
+    "$case->{season} Sunday has no Per Annum source label",
+  );
+}
+
 my $compline = strig_page('11-02-2026', 'prayCompletorium', 'Magyar');
 like($compline, qr/Védj meg minket\./, 'Hungarian Compline uses the short Nunc dimittis antiphon');
 like($compline, qr/Védj meg minket, Uram, amikor virrasztunk, őrizz minket, amikor alszunk, hogy Krisztusban virrasszunk és békességben nyugodjunk\./, 'Hungarian Compline uses the full Nunc dimittis antiphon');
